@@ -8,7 +8,7 @@
 
                 <div div fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column">
 
-                    <mat-form-field fxFlex="48%">
+                    <mat-form-field appearance="outline"  fxFlex="48%">
                         <mat-label> User Name </mat-label>
                         <input matInput required formControlName="username">
                         <mat-error *ngIf="createSelfServiceForm.controls.username.hasError('required')">
@@ -16,7 +16,7 @@
                         </mat-error>
                     </mat-form-field>
 
-                    <mat-form-field fxFlex="48%">
+                    <mat-form-field appearance="outline"  fxFlex="48%">
                         <mat-label> First Name </mat-label>
                         <input matInput required formControlName="firstname">
                         <mat-error *ngIf="createSelfServiceForm.controls.firstname.hasError('required')">
@@ -24,7 +24,7 @@
                         </mat-error>
                     </mat-form-field>
 
-                    <mat-form-field fxFlex="48%">
+                    <mat-form-field appearance="outline"  fxFlex="48%">
                         <mat-label> Last Name </mat-label>
                         <input matInput required formControlName="lastname">
                         <mat-error *ngIf="createSelfServiceForm.controls.lastname.hasError('required')">
@@ -32,7 +32,7 @@
                         </mat-error>
                     </mat-form-field>
 
-                    <mat-form-field fxFlex="48%">
+                    <mat-form-field appearance="outline"  fxFlex="48%">
                         <mat-label> Email </mat-label>
                         <input matInput required formControlName="email">
                         <mat-error *ngIf="createSelfServiceForm.controls.email.hasError('required')">
@@ -57,7 +57,7 @@
 
                     </div>
 
-                    <mat-form-field fxFlex="48%" *ngIf="!hidePasswordField">
+                    <mat-form-field appearance="outline"  fxFlex="48%" *ngIf="!hidePasswordField">
                         <mat-label> Password </mat-label>
                         <input matInput required formControlName="password" type="password">
                         <mat-error *ngIf="createSelfServiceForm.controls.password.hasError('required')">
@@ -65,7 +65,7 @@
                         </mat-error>
                     </mat-form-field>
 
-                    <mat-form-field fxFlex="48%" *ngIf="!hidePasswordField">
+                    <mat-form-field appearance="outline"  fxFlex="48%" *ngIf="!hidePasswordField">
                         <mat-label> Repeat Password </mat-label>
                         <input matInput required formControlName="repeatPassword" type="password">
                         <mat-error *ngIf="createSelfServiceForm.controls.repeatPassword.hasError('required')">
@@ -76,7 +76,7 @@
                         </mat-error>
                     </mat-form-field>
 
-                    <mat-form-field fxFlex="48%">
+                    <mat-form-field appearance="outline"  fxFlex="48%">
                         <mat-label> Status </mat-label>
                         <input matInput formControlName="status">
                     </mat-form-field>

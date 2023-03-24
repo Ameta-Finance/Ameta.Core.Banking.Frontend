@@ -38,7 +38,7 @@
 
             <div fxLayout="row" fxLayoutAlign="space-evenly center">
 
-              <mat-form-field>
+              <mat-form-field appearance="outline">
                 <mat-label>{{firstMappingEntity}}</mat-label>
                 <mat-select required formControlName="mappingFirstParamId">
                   <mat-option [value]="0">
@@ -53,7 +53,7 @@
                 </mat-error>
               </mat-form-field>
 
-              <mat-form-field>
+              <mat-form-field appearance="outline">
                 <mat-label>{{secondMappingEntity}}</mat-label>
                 <mat-select required formControlName="mappingSecondParamId">
                   <mat-option [value]="0">

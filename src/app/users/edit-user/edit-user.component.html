@@ -8,7 +8,7 @@
         
         <div fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column">
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Username</mat-label>
             <input matInput required formControlName="username"/>
             <mat-error *ngIf="editUserForm.controls.username.hasError('required')">
@@ -16,7 +16,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Email</mat-label>
             <input matInput required formControlName="email">
             <mat-error *ngIf="editUserForm.controls.email.hasError('email')">
@@ -27,7 +27,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>First name</mat-label>
             <input matInput required formControlName="firstname"/>
             <mat-error *ngIf="editUserForm.controls.firstname.hasError('pattern')">
@@ -38,7 +38,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Last name</mat-label>
             <input matInput required formControlName="lastname"/>
             <mat-error *ngIf="editUserForm.controls.lastname.hasError('pattern')">
@@ -55,7 +55,7 @@
             </mat-checkbox>
           </div>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Office</mat-label>
             <mat-select required formControlName="officeId" (selectionChange)="officeChanged($event.value)">
               <mat-option *ngFor="let office of officesData" [value]="office.id">
@@ -67,7 +67,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Staff</mat-label>
             <mat-select formControlName="staffId">
               <mat-option *ngFor="let staff of staffData" [value]="staff.id">
@@ -76,7 +76,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Roles</mat-label>
             <mat-select required formControlName="roles" multiple>
               <mat-option *ngFor="let role of rolesData" [value]="role.id">

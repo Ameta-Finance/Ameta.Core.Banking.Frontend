@@ -6,7 +6,7 @@
 
       <div fxLayout="column">
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label> Amount </mat-label>
           <input matInput required autofocus formControlName="amount">
           <mat-error *ngIf="transactionForm.controls.amount.hasError('required')">
@@ -14,7 +14,7 @@
           </mat-error>
         </mat-form-field>
 
-        <mat-form-field (click)="transactionDatePicker.open()">
+       <mat-form-field appearance="outline" (click)="transactionDatePicker.open()">
           <mat-label> Transaction date </mat-label>
           <input matInput [min]="minDate" [matDatepicker]="transactionDatePicker" required formControlName="transactionDate">
           <mat-datepicker-toggle matSuffix [for]="transactionDatePicker"></mat-datepicker-toggle>

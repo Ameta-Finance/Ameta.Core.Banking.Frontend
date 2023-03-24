@@ -8,7 +8,7 @@
 
         <div fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column">
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Office</mat-label>
             <mat-select required formControlName="officeId">
               <mat-option *ngFor="let office of officeOptions" [value]="office.id">
@@ -20,7 +20,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Legal Form</mat-label>
             <mat-select formControlName="legalFormId">
               <mat-option *ngFor="let legalForm of legalFormOptions" [value]="legalForm.id">
@@ -29,12 +29,12 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Account No</mat-label>
             <input matInput formControlName="accountNo">
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Staff</mat-label>
             <mat-select formControlName="staffId">
               <mat-option *ngFor="let staff of staffOptions" [value]="staff.id">
@@ -43,7 +43,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field *ngIf="editClientForm.contains('fullname')" fxFlex="48%">
+          <mat-form-field appearance="outline"  *ngIf="editClientForm.contains('fullname')" fxFlex="48%">
             <mat-label>{{ editClientForm.value.legalFormId === 1 ? 'Name' : 'Entity Name' }}</mat-label>
             <input matInput required formControlName="fullname">
             <mat-error *ngIf="editClientForm.controls.fullname.hasError('required')">
@@ -51,7 +51,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field *ngIf="editClientForm.contains('firstname')" fxFlex="48%">
+          <mat-form-field appearance="outline"  *ngIf="editClientForm.contains('firstname')" fxFlex="48%">
             <mat-label>First Name</mat-label>
             <input matInput required formControlName="firstname">
             <mat-error *ngIf="editClientForm.controls.firstname.hasError('required')">
@@ -59,12 +59,12 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field *ngIf="editClientForm.contains('middlename')" fxFlex="48%">
+          <mat-form-field appearance="outline"  *ngIf="editClientForm.contains('middlename')" fxFlex="48%">
             <mat-label>Middle Name</mat-label>
             <input matInput formControlName="middlename">
           </mat-form-field>
 
-          <mat-form-field *ngIf="editClientForm.contains('lastname')" fxFlex="48%">
+          <mat-form-field appearance="outline"  *ngIf="editClientForm.contains('lastname')" fxFlex="48%">
             <mat-label>Last Name</mat-label>
             <input matInput required formControlName="lastname">
             <mat-error *ngIf="editClientForm.controls.lastname.hasError('required')">
@@ -72,7 +72,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%" (click)="dateOfBirthDatePicker.open()">
+          <mat-form-field appearance="outline"  fxFlex="48%" (click)="dateOfBirthDatePicker.open()">
             <mat-label>{{ editClientForm.value.legalFormId === 1 ? 'Date of Birth' : 'Incorporation Date' }}</mat-label>
             <input matInput [max]="maxDate" [matDatepicker]="dateOfBirthDatePicker" formControlName="dateOfBirth">
             <mat-datepicker-toggle matSuffix [for]="dateOfBirthDatePicker"></mat-datepicker-toggle>
@@ -82,7 +82,7 @@
           <div fxFlex="100%" fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column" formGroupName="clientNonPersonDetails"
             *ngIf="editClientForm.contains('clientNonPersonDetails')">
 
-            <mat-form-field fxFlex="48%">
+            <mat-form-field appearance="outline"  fxFlex="48%">
               <mat-label>Constitution</mat-label>
               <mat-select formControlName="constitutionId" required>
                 <mat-option *ngFor="let constitution of constitutionOptions" [value]="constitution.id">
@@ -91,7 +91,7 @@
               </mat-select>
             </mat-form-field>
 
-            <mat-form-field fxFlex="48%">
+            <mat-form-field appearance="outline"  fxFlex="48%">
               <mat-label>Main Business Line</mat-label>
               <mat-select formControlName="mainBusinessLineId">
                 <mat-option *ngFor="let business of businessLineOptions" [value]="business.id">
@@ -100,25 +100,25 @@
               </mat-select>
             </mat-form-field>
 
-            <mat-form-field fxFlex="48%" (click)="incorpValidityTillDateDatePicker.open()">
+            <mat-form-field appearance="outline"  fxFlex="48%" (click)="incorpValidityTillDateDatePicker.open()">
               <mat-label>Incorporation Validity Till Date</mat-label>
               <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="incorpValidityTillDateDatePicker" formControlName="incorpValidityTillDate">
               <mat-datepicker-toggle matSuffix [for]="incorpValidityTillDateDatePicker"></mat-datepicker-toggle>
               <mat-datepicker #incorpValidityTillDateDatePicker></mat-datepicker>
             </mat-form-field>
 
-            <mat-form-field fxFlex="48%">
+            <mat-form-field appearance="outline"  fxFlex="48%">
               <mat-label>Incorporation No</mat-label>
               <input matInput formControlName="incorpNumber">
             </mat-form-field>
 
-            <mat-form-field fxFlex="98%">
+            <mat-form-field appearance="outline"  fxFlex="98%">
               <mat-label>Remarks</mat-label>
               <textarea matInput formControlName="remarks" cdkTextareaAutosize cdkAutosizeMinRows="2"></textarea>
             </mat-form-field>
           </div>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>External Id</mat-label>
             <input matInput formControlName="externalId">
           </mat-form-field>
@@ -127,12 +127,12 @@
             Is staff?
           </mat-checkbox>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Mobile No</mat-label>
             <input matInput type="number" formControlName="mobileNo">
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Email Address</mat-label>
             <input matInput formControlName="emailAddress">
             <mat-error *ngIf="editClientForm.controls.emailAddress.errors?.email">
@@ -140,7 +140,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Client Type</mat-label>
             <mat-select formControlName="clientTypeId">
               <mat-option *ngFor="let clientType of clientTypeOptions" [value]="clientType.id">
@@ -149,7 +149,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Client Classification</mat-label>
             <mat-select formControlName="clientClassificationId">
               <mat-option *ngFor="let clientClassification of clientClassificationTypeOptions" [value]="clientClassification.id">
@@ -158,7 +158,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%" (click)="submittedOnDatePicker.open()">
+          <mat-form-field appearance="outline"  fxFlex="48%" (click)="submittedOnDatePicker.open()">
             <mat-label>Submitted On</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="submittedOnDatePicker" formControlName="submittedOnDate" required>
             <mat-datepicker-toggle matSuffix [for]="submittedOnDatePicker"></mat-datepicker-toggle>
@@ -168,7 +168,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%" (click)="activatedOnDatePicker.open()">
+          <mat-form-field appearance="outline"  fxFlex="48%" (click)="activatedOnDatePicker.open()">
             <mat-label>Activated On</mat-label>
             <input matInput [min]="editClientForm.value.submittedOnDate" [max]="maxDate" [matDatepicker]="activatedOnDatePicker"
               formControlName="activationDate">
@@ -176,7 +176,7 @@
             <mat-datepicker #activatedOnDatePicker></mat-datepicker>
           </mat-form-field>
 
-          <mat-form-field *ngIf="editClientForm.value.legalFormId === 1" fxFlex="48%">
+          <mat-form-field appearance="outline"  *ngIf="editClientForm.value.legalFormId === 1" fxFlex="48%">
             <mat-label>Gender</mat-label>
             <mat-select formControlName="genderId">
               <mat-option *ngFor="let gender of genderOptions" [value]="gender.id">

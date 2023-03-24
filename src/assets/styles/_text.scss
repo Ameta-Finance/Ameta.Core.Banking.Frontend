@@ -1,6 +1,9 @@
+// @import "assets/font/stylesheet";
+
 html,
 body {
   -webkit-font-smoothing: antialiased;
+  font-family: "Euclid Circular A";
 }
 
 html {
@@ -10,9 +13,10 @@ html {
 body {
   font-weight: 400;
   font-size: 0.875rem;
-  color: rgba(0, 0, 0, 0.87);
+  color: #414a58;
   line-height: 1.5;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  
+
 }
 
 .lh-1 {

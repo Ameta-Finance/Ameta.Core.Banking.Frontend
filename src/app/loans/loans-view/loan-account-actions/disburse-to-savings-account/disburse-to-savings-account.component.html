@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field (click)="disbursementDatePicker.open()">
+         <mat-form-field appearance="outline" (click)="disbursementDatePicker.open()">
             <mat-label>Disbursement On</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="disbursementDatePicker" required
               formControlName="actualDisbursementDate">
@@ -19,7 +19,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Transaction amount</mat-label>
             <input matInput type="number" required formControlName="transactionAmount">
             <mat-error *ngIf="disbursementForm.controls.transactionAmount.hasError('required')">
@@ -27,12 +27,12 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field *ngIf="dataObject.fixedEmiAmount">
+          <mat-form-field appearance="outline"  *ngIf="dataObject.fixedEmiAmount">
             <mat-label>Fixed EMI amount</mat-label>
             <input matInput type="number" formControlName="fixedEmiAmount">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Note</mat-label>
             <textarea matInput formControlName="note" cdkTextareaAutosize cdkAutosizeMinRows="2"></textarea>
           </mat-form-field>

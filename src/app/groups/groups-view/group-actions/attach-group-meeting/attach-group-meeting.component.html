@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field (click)="startDatePicker.open()">
+         <mat-form-field appearance="outline" (click)="startDatePicker.open()">
             <mat-label>Meeting Start Date</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="startDatePicker" required formControlName="startDate">
             <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
@@ -22,7 +22,7 @@
             Repeats?
           </mat-checkbox>
 
-          <mat-form-field *ngIf="groupMeetingForm.contains('frequency')">
+          <mat-form-field appearance="outline"  *ngIf="groupMeetingForm.contains('frequency')">
             <mat-label>Repetition Frequency</mat-label>
             <mat-select formControlName="frequency">
               <mat-option *ngFor="let option of frequencyOptions" [value]="option.id">
@@ -34,7 +34,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field *ngIf="groupMeetingForm.contains('interval')">
+          <mat-form-field appearance="outline"  *ngIf="groupMeetingForm.contains('interval')">
             <mat-label>Repetition Interval</mat-label>
             <mat-select formControlName="interval">
               <mat-option *ngFor="let interval of repetitionIntervals" [value]="interval">
@@ -46,7 +46,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field *ngIf="groupMeetingForm.contains('repeatsOnDay')">
+          <mat-form-field appearance="outline"  *ngIf="groupMeetingForm.contains('repeatsOnDay')">
           <mat-label>Repeats on Day</mat-label>
           <mat-select formControlName="repeatsOnDay" required>
             <mat-option *ngFor="let day of repeatsOnDays" [value]="day.id">

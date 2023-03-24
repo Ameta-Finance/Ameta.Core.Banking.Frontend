@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Staff</mat-label>
             <mat-select formControlName="staffId">
               <mat-option *ngFor="let staff of staffData" [value]="staff.id">

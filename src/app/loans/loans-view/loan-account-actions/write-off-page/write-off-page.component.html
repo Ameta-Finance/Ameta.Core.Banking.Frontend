@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field (click)="writeOffDatePicker.open()">
+         <mat-form-field appearance="outline" (click)="writeOffDatePicker.open()">
             <mat-label>Write off on</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="writeOffDatePicker" required
               formControlName="transactionDate">
@@ -19,12 +19,12 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Amount</mat-label>
             <input matInput formControlName="amount">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Note</mat-label>
             <textarea matInput formControlName="note" cdkTextareaAutosize cdkAutosizeMinRows="2"></textarea>
           </mat-form-field>

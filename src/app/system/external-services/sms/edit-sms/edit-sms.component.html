@@ -8,7 +8,7 @@
   
           <div fxLayout="column">
   
-            <mat-form-field>
+            <mat-form-field appearance="outline">
               <mat-label>Host Name</mat-label>
               <input matInput required formControlName="host_name">
               <mat-error *ngIf="smsConfigurationForm.controls.host_name.hasError('required')">
@@ -16,7 +16,7 @@
               </mat-error>
             </mat-form-field>
   
-            <mat-form-field>
+            <mat-form-field appearance="outline">
               <mat-label>Port Number</mat-label>
               <input matInput required formControlName="port_number">
               <mat-error *ngIf="smsConfigurationForm.controls.port_number.hasError('required')">
@@ -24,7 +24,7 @@
               </mat-error>
             </mat-form-field>
   
-            <mat-form-field>
+            <mat-form-field appearance="outline">
               <mat-label>End Point</mat-label>
               <input matInput required formControlName="end_point">
               <mat-error *ngIf="smsConfigurationForm.controls.end_point.hasError('required')">
@@ -32,7 +32,7 @@
               </mat-error>
             </mat-form-field>
 
-            <mat-form-field>
+            <mat-form-field appearance="outline">
                 <mat-label>Tenant App Key</mat-label>
                 <input matInput required formControlName="tenant_app_key">
                 <mat-error *ngIf="smsConfigurationForm.controls.tenant_app_key.hasError('required')">

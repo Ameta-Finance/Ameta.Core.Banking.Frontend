@@ -8,7 +8,7 @@
 
         <div fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="4%">
 
-          <mat-form-field fxFlex="40%">
+          <mat-form-field appearance="outline"  fxFlex="40%">
             <mat-label>Hook Template</mat-label>
             <mat-select required formControlName="name">
               <mat-option *ngFor="let hookTemplate of hooksTemplateData.templates" [value]="hookTemplate.name">
@@ -20,7 +20,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="40%">
+          <mat-form-field appearance="outline"  fxFlex="40%">
             <mat-label>Display Name</mat-label>
             <input matInput required formControlName="displayName">
             <mat-error *ngIf="hookForm.controls.displayName.hasError('required')">
@@ -38,7 +38,7 @@
 
         <div fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="4%">
 
-          <mat-form-field fxFlex="48%" *ngIf="hookForm.controls.name.value === 'Web'">
+          <mat-form-field appearance="outline"  fxFlex="48%" *ngIf="hookForm.controls.name.value === 'Web'">
             <mat-label>Content Type</mat-label>
             <mat-select required formControlName="contentType">
               <mat-option [value]="'json'">
@@ -53,7 +53,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%" *ngIf="hookForm.controls.name.value === 'SMS Bridge'">
+          <mat-form-field appearance="outline"  fxFlex="48%" *ngIf="hookForm.controls.name.value === 'SMS Bridge'">
             <mat-label>Phone Number</mat-label>
             <input matInput type="tel" #input maxlength="10" required formControlName="phoneNumber">
             <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
@@ -62,7 +62,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Payload URL</mat-label>
             <input matInput required formControlName="payloadUrl">
             <mat-error *ngIf="hookForm.controls.payloadUrl.hasError('required')">
@@ -75,7 +75,7 @@
         <div fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="4%"
           *ngIf="hookForm.controls.name.value === 'SMS Bridge'">
 
-          <mat-form-field fxFlex="30%">
+          <mat-form-field appearance="outline"  fxFlex="30%">
             <mat-label>SMS Provider</mat-label>
             <input matInput required formControlName="smsProvider">
             <mat-error *ngIf="hookForm.controls.smsProvider.hasError('required')">
@@ -83,7 +83,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="30%">
+          <mat-form-field appearance="outline"  fxFlex="30%">
             <mat-label>SMS Provider Account ID</mat-label>
             <input matInput required formControlName="smsProviderAccountId">
             <mat-error *ngIf="hookForm.controls.smsProviderAccountId.hasError('required')">
@@ -91,7 +91,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="30%">
+          <mat-form-field appearance="outline"  fxFlex="30%">
             <mat-label>SMS Provider Token</mat-label>
             <input matInput required formControlName="smsProviderToken">
             <mat-error *ngIf="hookForm.controls.smsProviderToken.hasError('required')">

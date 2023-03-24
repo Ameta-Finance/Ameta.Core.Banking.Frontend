@@ -7,7 +7,7 @@
       <form #formRef="ngForm" [formGroup]="currencyForm" fxLayout="row" fxLayoutAlign="start baseline" fxLayoutGap="20px"
         fxFlex="48%" (ngSubmit)="addCurrency()">
 
-        <mat-form-field fxFlex="calc(90%-20px)">
+        <mat-form-field appearance="outline"  fxFlex="calc(90%-20px)">
             <mat-label>Currency</mat-label>
             <mat-select required formControlName="currency">
               <mat-option *ngFor="let currency of currencyData" [value]="currency">

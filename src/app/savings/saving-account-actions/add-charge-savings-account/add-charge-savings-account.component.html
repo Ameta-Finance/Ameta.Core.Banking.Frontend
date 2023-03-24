@@ -7,7 +7,7 @@
       <mat-card-content>
 
         <div fxLayout="column">
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Charge</mat-label>
             <mat-select required formControlName="chargeId">
               <mat-option *ngFor="let savingsCharge of savingsChargeOptions" [value]="savingsCharge.id">
@@ -21,7 +21,7 @@
 
           <div *ngIf="chargeDetails" fxLayout="column">
 
-            <mat-form-field>
+            <mat-form-field appearance="outline">
               <mat-label>Amount</mat-label>
               <input type="number" required matInput formControlName="amount" />
               <mat-error *ngIf="savingsChargeForm.controls.amount.hasError('required')">
@@ -29,7 +29,7 @@
               </mat-error>
             </mat-form-field>
 
-            <mat-form-field>
+            <mat-form-field appearance="outline">
               <mat-label>Charge Calculation</mat-label>
               <mat-select formControlName="chargeCalculationType">
                 <mat-option *ngFor="let chargeCalculation of chargeDetails.chargeCalculationTypeOptions"
@@ -39,7 +39,7 @@
               </mat-select>
             </mat-form-field>
 
-            <mat-form-field>
+            <mat-form-field appearance="outline">
               <mat-label>Charge time type</mat-label>
               <mat-select formControlName="chargeTimeType">
                 <mat-option *ngFor="let chargeTime of chargeDetails.chargeTimeTypeOptions" [value]="chargeTime.id">
@@ -48,7 +48,7 @@
               </mat-select>
             </mat-form-field>
 
-            <mat-form-field *ngIf="savingsChargeForm.contains('dueDate')" (click)="dueDatePicker.open()">
+            <mat-form-field appearance="outline"  *ngIf="savingsChargeForm.contains('dueDate')" (click)="dueDatePicker.open()">
               <mat-label>Due for collection on</mat-label>
               <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="dueDatePicker" required
                 formControlName="dueDate">
@@ -59,7 +59,7 @@
               </mat-error>
             </mat-form-field>
 
-            <mat-form-field *ngIf="savingsChargeForm.contains('feeOnMonthDay')" (click)="feeOnMonthDayPicker.open()">
+            <mat-form-field appearance="outline"  *ngIf="savingsChargeForm.contains('feeOnMonthDay')" (click)="feeOnMonthDayPicker.open()">
               <mat-label>Due On</mat-label>
               <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="feeOnMonthDayPicker" required
                 formControlName="feeOnMonthDay">
@@ -70,7 +70,7 @@
               </mat-error>
             </mat-form-field>
 
-            <mat-form-field *ngIf="savingsChargeForm.contains('feeInterval')">
+            <mat-form-field appearance="outline"  *ngIf="savingsChargeForm.contains('feeInterval')">
               <mat-label>Repeats Every</mat-label>
               <input matInput formControlName="feeInterval" />
             </mat-form-field>

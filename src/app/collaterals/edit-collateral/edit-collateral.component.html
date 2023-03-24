@@ -10,12 +10,12 @@
                     
                     <div fxLayout="column">
 
-                        <mat-form-field>
+                        <mat-form-field appearance="outline">
                             <mat-label>Name</mat-label>
                             <input matInput required formControlName="name">
                         </mat-form-field>
 
-                        <mat-form-field>
+                        <mat-form-field appearance="outline">
                             <mat-label>Quantity</mat-label>
                             <input matInput required formControlName="quantity">
                             <mat-error *ngIf="clientCollateralForm.controls.quantity.hasError('required')">
@@ -23,12 +23,12 @@
                             </mat-error>
                         </mat-form-field>
 
-                        <mat-form-field>
+                        <mat-form-field appearance="outline">
                             <mat-label>Total</mat-label>
                             <input matInput required formControlName="total">
                         </mat-form-field>
 
-                        <mat-form-field>
+                        <mat-form-field appearance="outline">
                             <mat-label>Total Collateral Value</mat-label>
                             <input matInput required formControlName="totalCollateral">
                         </mat-form-field>

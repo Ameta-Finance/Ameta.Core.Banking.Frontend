@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Office</mat-label>
             <mat-select required formControlName="destinationOfficeId">
               <mat-option *ngFor="let office of officeData" [value]="office.id">
@@ -20,7 +20,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field (click)="transferDatePicker.open()">
+         <mat-form-field appearance="outline" (click)="transferDatePicker.open()">
             <mat-label>Transfer Date</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="transferDatePicker" required formControlName="transferDate">
             <mat-datepicker-toggle matSuffix [for]="transferDatePicker"></mat-datepicker-toggle>
@@ -30,7 +30,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Note</mat-label>
             <textarea matInput formControlName="note" cdkTextareaAutosize cdkAutosizeMinRows="2"></textarea>
           </mat-form-field>

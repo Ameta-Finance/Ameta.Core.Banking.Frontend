@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field (click)="interestDatePicker.open()">
+         <mat-form-field appearance="outline" (click)="interestDatePicker.open()">
             <mat-label>Interest waived on</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="interestDatePicker" required
               formControlName="transactionDate">
@@ -19,7 +19,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Transaction amount</mat-label>
             <input matInput required formControlName="transactionAmount">
             <mat-error *ngIf="loanInterestForm.controls.transactionAmount.hasError('required')">
@@ -27,7 +27,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Note</mat-label>
             <textarea matInput formControlName="note" cdkTextareaAutosize cdkAutosizeMinRows="2"></textarea>
           </mat-form-field>

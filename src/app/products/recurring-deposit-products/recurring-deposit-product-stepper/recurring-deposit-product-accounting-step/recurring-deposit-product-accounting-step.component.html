@@ -16,7 +16,7 @@
 
       <h4 fxFlex="98%" class="mat-h4">Assets</h4>
 
-      <mat-form-field fxFlex="48%">
+      <mat-form-field appearance="outline"  fxFlex="48%">
         <mat-label>Saving reference</mat-label>
         <mat-select formControlName="savingsReferenceAccountId" required>
           <mat-option *ngFor="let assetAccount of assetAccountData" [value]="assetAccount.id">
@@ -32,7 +32,7 @@
 
       <h4 fxFlex="98%" class="mat-h4">Liabilities</h4>
 
-      <mat-form-field fxFlex="48%">
+      <mat-form-field appearance="outline"  fxFlex="48%">
         <mat-label>Saving control</mat-label>
         <mat-select formControlName="savingsControlAccountId" required>
           <mat-option *ngFor="let liabilityAccount of liabilityAccountData" [value]="liabilityAccount.id">
@@ -44,7 +44,7 @@
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field fxFlex="48%">
+      <mat-form-field appearance="outline"  fxFlex="48%">
         <mat-label>Savings transfers in suspense</mat-label>
         <mat-select formControlName="transfersInSuspenseAccountId" required>
           <mat-option *ngFor="let liabilityAccount of liabilityAccountData" [value]="liabilityAccount.id">
@@ -60,7 +60,7 @@
 
       <h4 fxFlex="98%" class="mat-h4">Expenses</h4>
 
-      <mat-form-field fxFlex="48%">
+      <mat-form-field appearance="outline"  fxFlex="48%">
         <mat-label>Interest on savings</mat-label>
         <mat-select formControlName="interestOnSavingsAccountId" required>
           <mat-option *ngFor="let expenseAccount of expenseAccountData" [value]="expenseAccount.id">
@@ -76,7 +76,7 @@
 
       <h4 fxFlex="98%" class="mat-h4">Income</h4>
 
-      <mat-form-field fxFlex="48%">
+      <mat-form-field appearance="outline"  fxFlex="48%">
         <mat-label>Income from fees</mat-label>
         <mat-select formControlName="incomeFromFeeAccountId" required>
           <mat-option *ngFor="let incomeAccount of incomeAccountData" [value]="incomeAccount.id">
@@ -88,7 +88,7 @@
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field fxFlex="48%">
+      <mat-form-field appearance="outline"  fxFlex="48%">
         <mat-label>Income from penalties</mat-label>
         <mat-select formControlName="incomeFromPenaltyAccountId" required>
           <mat-option *ngFor="let incomeAccount of incomeAccountData" [value]="incomeAccount.id">

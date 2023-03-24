@@ -1,0 +1,43 @@
+table {
+    width: 100%;
+    border: none;
+    .select-row:hover {
+      cursor: pointer;
+    }
+  }
+  #loan-filter {
+    .mat-form-field-wrapper {
+      .mat-form-field-flex {
+        padding-top: 0;
+      }
+    }
+  }
+  .mat-form-field-appearance-standard .mat-form-field-flex {
+    padding-top: 0;
+  }
+  th.mat-header-cell {
+    background-color: #f5f7f9;
+    border-bottom-width: 1px;
+  }
+  th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+    padding: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+     border-bottom-color: #dfe5ec;
+    height: 50px;
+}
+  .mat-header-cell {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  tr.mat-header-row {
+    height: 40px !important;
+  }
+  
+  .search {
+    background: #fff;
+    border: 1px solid #dfe5ec;
+    border-radius: 5px;
+    padding: 4px 16px;
+  }
+  

@@ -25,7 +25,7 @@ export class ShellComponent implements OnInit, OnDestroy {
       map(result => result.matches)
     );
   /** Sets the initial state of sidenav as collapsed. Not collapsed if false. */
-  sidenavCollapsed = true;
+  sidenavCollapsed = false;
   /** Progress bar mode. */
   progressBarMode: string;
   /** Subscription to progress bar. */

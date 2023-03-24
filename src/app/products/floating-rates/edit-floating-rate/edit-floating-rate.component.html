@@ -8,7 +8,7 @@
 
         <div fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="15%">
 
-          <mat-form-field fxFlex="25%">
+          <mat-form-field appearance="outline"  fxFlex="25%">
             <mat-label>Floating Rate Name</mat-label>
             <input matInput required matTooltip="Unique name for the floating rate scheme." formControlName="name">
             <mat-error *ngIf="floatingRateForm.controls.name.hasError('required')">

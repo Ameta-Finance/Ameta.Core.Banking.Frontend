@@ -8,27 +8,27 @@
 
         <div fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column">
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Name</mat-label>
             <input matInput formControlName="name">
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Applicant</mat-label>
             <input matInput formControlName="applicant">
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Type</mat-label>
             <input matInput formControlName="type">
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>From Account Type</mat-label>
             <input matInput formControlName="fromAccountType">
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Priority</mat-label>
             <mat-select required formControlName="priority">
               <mat-option *ngFor="let priorityType of priorityTypeData" [value]="priorityType.id">
@@ -40,7 +40,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Status</mat-label>
             <mat-select required formControlName="status">
               <mat-option *ngFor="let statusType of statusTypeData" [value]="statusType.id">
@@ -52,37 +52,37 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>From Account</mat-label>
             <input matInput formControlName="fromAccount">
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Destination</mat-label>
             <input matInput formControlName="destination">
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>To Office</mat-label>
             <input matInput formControlName="toOffice">
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Beneficiary</mat-label>
             <input matInput formControlName="toClientId">
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>To Account Type</mat-label>
             <input matInput formControlName="toAccountType">
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>To Account</mat-label>
             <input matInput formControlName="toAccount">
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Standing Instruction Type</mat-label>
             <mat-select formControlName="instructionType">
               <mat-option *ngFor="let instructionsType of instructionTypeData"
@@ -92,12 +92,12 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Amount</mat-label>
             <input matInput formControlName="amount">
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%" (click)="validFromDatePicker.open()">
+          <mat-form-field appearance="outline"  fxFlex="48%" (click)="validFromDatePicker.open()">
             <mat-label>Validity From</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="validFromDatePicker" required
               formControlName="validFrom">
@@ -108,7 +108,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%" (click)="validTillDatePicker.open()">
+          <mat-form-field appearance="outline"  fxFlex="48%" (click)="validTillDatePicker.open()">
             <mat-label>Validity To</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="validTillDatePicker" required
               formControlName="validTill">
@@ -119,7 +119,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Recurrence Type</mat-label>
             <mat-select required formControlName="recurrenceType">
               <mat-option *ngFor="let recurrenceType of recurrenceTypeData" [value]="recurrenceType.id">
@@ -131,12 +131,12 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Interval</mat-label>
             <input matInput formControlName="recurrenceInterval">
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Recurrence Frequency</mat-label>
             <mat-select formControlName="recurrenceFrequency">
               <mat-option *ngFor="let recurrenceFrequencyType of recurrenceFrequencyTypeData"
@@ -146,7 +146,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%" (click)="recurrenceOnMonthDayDatePicker.open()">
+          <mat-form-field appearance="outline"  fxFlex="48%" (click)="recurrenceOnMonthDayDatePicker.open()">
             <mat-label>On Month Day</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="recurrenceOnMonthDayDatePicker"
               formControlName="recurrenceOnMonthDay">

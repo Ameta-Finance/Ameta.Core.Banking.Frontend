@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Office</mat-label>
             <mat-select required formControlName="officeId">
               <mat-option *ngFor="let office of officeData" [value]="office.id">
@@ -20,7 +20,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>First Name</mat-label>
             <input matInput required formControlName="firstname">
             <mat-error *ngIf="editEmployeeForm.controls.firstname.hasError('required')">
@@ -31,7 +31,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Last Name</mat-label>
             <input matInput required formControlName="lastname">
             <mat-error *ngIf="editEmployeeForm.controls.lastname.hasError('required')">
@@ -46,7 +46,7 @@
             Is Loan Officer
           </mat-checkbox>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Mobile Number for SMS</mat-label>
             <input matInput formControlName="mobileNo">
           </mat-form-field>
@@ -55,7 +55,7 @@
             Active
           </mat-checkbox>
 
-          <mat-form-field (click)="joiningDatePicker.open()">
+         <mat-form-field appearance="outline" (click)="joiningDatePicker.open()">
             <mat-label>Joining Date</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="joiningDatePicker" required formControlName="joiningDate">
             <mat-datepicker-toggle matSuffix [for]="joiningDatePicker"></mat-datepicker-toggle>

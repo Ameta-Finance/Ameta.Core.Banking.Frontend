@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Default Savings Account</mat-label>
             <mat-select formControlName="savingsAccountId">
               <mat-option *ngFor="let account of savingsAccounts" [value]="account.id">

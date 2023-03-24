@@ -2,17 +2,17 @@
 
   <div fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column" fxLayoutAlign.gt-sm="start center">
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Currency</mat-label>
       <input matInput formControlName="currencyCode">
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Decimal Places</mat-label>
       <input type="number" matInput formControlName="decimal">
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Nominal Annual Interest Rate</mat-label>
       <input type="number" matInput formControlName="nominalAnnualInterestRate" required>
       <mat-error>
@@ -20,7 +20,7 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Interest Compounding Period</mat-label>
       <mat-select formControlName="interestCompoundingPeriodType" required>
         <mat-option *ngFor="let interestCompoundingPeriodType of interestCompoundingPeriodTypeData" [value]="interestCompoundingPeriodType.id">
@@ -32,7 +32,7 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Interest Posting Period</mat-label>
       <mat-select formControlName="interestPostingPeriodType" required>
         <mat-option *ngFor="let interestPostingPeriodType of interestPostingPeriodTypeData" [value]="interestPostingPeriodType.id">
@@ -44,7 +44,7 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Interest Calculated using</mat-label>
       <mat-select formControlName="interestCalculationType" required>
         <mat-option *ngFor="let interestCalculationType of interestCalculationTypeData" [value]="interestCalculationType.id">
@@ -56,7 +56,7 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Days in Year</mat-label>
       <mat-select formControlName="interestCalculationDaysInYearType" required>
         <mat-option *ngFor="let interestCalculationDaysInYearType of interestCalculationDaysInYearTypeData" [value]="interestCalculationDaysInYearType.id">
@@ -68,7 +68,7 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Minimum Opening Balance</mat-label>
       <input type="number" matInput formControlName="minRequiredOpeningBalance">
     </mat-form-field>
@@ -79,12 +79,12 @@
 
     <h4 fxFlex="98%" class="mat-h4">Lock-in Period</h4>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Frequency</mat-label>
       <input type="number" matInput formControlName="lockinPeriodFrequency">
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Type</mat-label>
       <mat-select formControlName="lockinPeriodFrequencyType">
         <mat-option *ngFor="let lockinPeriodFrequencyType of lockinPeriodFrequencyTypeData" [value]="lockinPeriodFrequencyType.id">
@@ -103,17 +103,17 @@
 
     <div *ngIf="savingsAccountTermsForm.value.allowOverdraft" fxFlexFill fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column">
 
-      <mat-form-field fxFlex="31%">
+      <mat-form-field appearance="outline"  fxFlex="31%">
         <mat-label>Minimum Overdraft Required for Interest Calculation</mat-label>
         <input type="number" matInput formControlName="minOverdraftForInterestCalculation">
       </mat-form-field>
 
-      <mat-form-field fxFlex="31%">
+      <mat-form-field appearance="outline"  fxFlex="31%">
         <mat-label>Nominal Annual Interest for Overdraft</mat-label>
         <input type="number" matInput formControlName="nominalAnnualInterestRateOverdraft">
       </mat-form-field>
 
-      <mat-form-field fxFlex="31%">
+      <mat-form-field appearance="outline"  fxFlex="31%">
         <mat-label>Maximum Overdraft Amount Limit</mat-label>
         <input type="number" matInput formControlName="overdraftLimit">
       </mat-form-field>
@@ -126,12 +126,12 @@
       Enforce Minimum Balance
     </mat-checkbox>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Minimum Balance</mat-label>
       <input type="number" matInput formControlName="minRequiredBalance">
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%" *ngIf="savingsAccountTermsForm.controls.minBalanceForInterestCalculation.value">
+    <mat-form-field appearance="outline"  fxFlex="48%" *ngIf="savingsAccountTermsForm.controls.minBalanceForInterestCalculation.value">
       <mat-label>Balance Required for Interest Calculation</mat-label>
       <input type="number" matInput formControlName="minBalanceForInterestCalculation">
     </mat-form-field>

@@ -31,12 +31,18 @@ export class SidenavComponent implements OnInit, AfterViewInit {
 
   /** Username of authenticated user. */
   username: string;
+  officeName: string;
   /** Array of all user activities */
   userActivity: string[];
   /** Mapped Activites */
   mappedActivities: any[] = [];
   /** Collection of possible frequent activities */
   frequentActivities: any[] = frequentActivities;
+
+  panelOpenState = false;
+  linksOpenState = false;
+  reportsOpenState = false;
+  selfOpenState = false;
 
   /* Refernce of logo */
   @ViewChild('logo') logo: ElementRef<any>;
@@ -71,6 +77,7 @@ export class SidenavComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     const credentials = this.authenticationService.getCredentials();
     this.username = credentials.username;
+    this.officeName = credentials.officeName;
     this.setMappedAcitivites();
   }
 
@@ -175,11 +182,11 @@ export class SidenavComponent implements OnInit, AfterViewInit {
    * To show popovers
    */
   ngAfterViewInit() {
-    if (this.configurationWizardService.showSideNav === true) {
-      setTimeout(() => {
-          this.showPopover(this.templateLogo, this.logo.nativeElement, 'bottom', true);
-      });
-    }
+    // if (this.configurationWizardService.showSideNav === true) {
+    //   setTimeout(() => {
+    //       this.showPopover(this.templateLogo, this.logo.nativeElement, 'bottom', true);
+    //   });
+    // }
     if (this.configurationWizardService.showSideNavChartofAccounts === true) {
       setTimeout(() => {
           this.showPopover(this.templateChartOfAccounts, this.chartOfAccounts.nativeElement, 'top', true);

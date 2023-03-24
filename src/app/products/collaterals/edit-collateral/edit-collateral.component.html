@@ -8,7 +8,7 @@
 
                 <div fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column">
 
-                    <mat-form-field fxFlex="48%">
+                    <mat-form-field appearance="outline"  fxFlex="48%">
                         <mat-label>Name</mat-label>
                         <input matInput required autoFocus formControlName="name">
                         <mat-error *ngIf="collateralForm.controls.name.hasError('required')">
@@ -16,7 +16,7 @@
                         </mat-error>
                     </mat-form-field>
 
-                    <mat-form-field fxFlex="48%">
+                    <mat-form-field appearance="outline"  fxFlex="48%">
                         <mat-label>Type/Quality</mat-label>
                         <input matInput required autoFocus formControlName="quality">
                         <mat-error *ngIf="collateralForm.controls.quality.hasError('required')">
@@ -24,7 +24,7 @@
                         </mat-error>
                     </mat-form-field>
 
-                    <mat-form-field fxFlex="48%">
+                    <mat-form-field appearance="outline"  fxFlex="48%">
                         <mat-label>Unit Type</mat-label>
                         <input matInput required autoFocus formControlName="unitType">
                         <mat-error *ngIf="collateralForm.controls.unitType.hasError('required')">
@@ -32,7 +32,7 @@
                         </mat-error>
                     </mat-form-field>
 
-                    <mat-form-field fxFlex="48%">
+                    <mat-form-field appearance="outline"  fxFlex="48%">
                         <mat-label>Base Price</mat-label>
                         <input matInput required autoFocus formControlName="basePrice">
                         <mat-error *ngIf="collateralForm.controls.basePrice.hasError('required')">
@@ -40,7 +40,7 @@
                         </mat-error>
                     </mat-form-field>
 
-                    <mat-form-field fxFlex="48%">
+                    <mat-form-field appearance="outline"  fxFlex="48%">
                         <mat-label>Percentage To Base</mat-label>
                         <input matInput required autoFocus formControlName="pctToBase">
                         <mat-error *ngIf="collateralForm.controls.pctToBase.hasError('required')">
@@ -48,7 +48,7 @@
                         </mat-error>
                     </mat-form-field>
 
-                    <mat-form-field fxFlex="48%">
+                    <mat-form-field appearance="outline"  fxFlex="48%">
                         <mat-label>Currency</mat-label>
                         <mat-select required formControlName="currency">
                             <mat-option *ngFor="let currency of collateralTemplateData" [value]="currency.code">

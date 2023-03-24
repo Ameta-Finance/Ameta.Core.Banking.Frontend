@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Select Client Members for Transfer</mat-label>
             <mat-select required formControlName="clients" multiple>
               <mat-option *ngFor="let member of clientMembers" [value]="{ id: member.id }">
@@ -24,7 +24,7 @@
             Inherit Group Loan Officer?
           </mat-checkbox>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Destination Group</mat-label>
             <input matInput formControlName="destinationGroupId" [matAutocomplete]="groupsAutocomplete">
             <mat-error *ngIf="transferClientsForm.controls.destinationGroupId.hasError('required')">

@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Name</mat-label>
             <input matInput required formControlName="name">
             <mat-error *ngIf="taxComponentForm.controls.name.hasError('required')">
@@ -16,7 +16,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Percentage</mat-label>
             <input matInput required formControlName="percentage">
             <mat-error *ngIf="taxComponentForm.controls.name.hasError('required')">
@@ -24,17 +24,17 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field *ngIf="taxComponentData.creditAccountType.value">
+          <mat-form-field appearance="outline"  *ngIf="taxComponentData.creditAccountType.value">
             <mat-label>Credit Account Type</mat-label>
             <input matInput formControlName="creditAccountType">
           </mat-form-field>
 
-          <mat-form-field *ngIf="taxComponentData.creditAccount.name">
+          <mat-form-field appearance="outline"  *ngIf="taxComponentData.creditAccount.name">
             <mat-label>Credit Account</mat-label>
             <input matInput formControlName="creditAccount">
           </mat-form-field>
 
-          <mat-form-field (click)="startDatePicker.open()">
+         <mat-form-field appearance="outline" (click)="startDatePicker.open()">
             <mat-label>Start Date</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="startDatePicker" required formControlName="startDate">
             <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>

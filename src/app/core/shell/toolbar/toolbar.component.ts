@@ -45,6 +45,33 @@ export class ToolbarComponent implements OnInit, AfterViewInit {
 
   /** Sets the initial state of sidenav as collapsed. Not collapsed if false. */
   sidenavCollapsed = true;
+  applications = [
+    // {
+    //   url: `http://3.16.1.81:777`,
+    //   logo: "assets/images/ametacore.svg",
+    //   title: "Core",
+    // },
+    {
+      url: `http://3.16.1.81:444`,
+      logo: "assets/images/ametapay.svg",
+     title: "Pay"
+    },
+    {
+      url: `http://3.16.1.81:304`,
+      logo: "assets/images/ametabanking.svg",
+      title: "Banking",
+    },
+    {
+      url: `http://3.16.1.81:448`,
+      logo: "assets/images/ametaid.svg",
+      title: "Id",
+    },
+    {
+      url: `http://3.16.1.81:305`,
+      logo: "assets/images/ametasavings.svg",
+      title: "Savings",
+    },
+  ];
 
   /** Instance of sidenav. */
   @Input() sidenav: MatSidenav;

@@ -7,7 +7,7 @@
       <form #formRef="ngForm" [formGroup]="fundForm" fxLayout="row" fxLayoutAlign="start baseline" fxLayoutGap="20px"
         (ngSubmit)="addFund()" *mifosxHasPermission="'CREATE_FUND'">
 
-        <mat-form-field fxFlex="calc(90%-20px)">
+        <mat-form-field appearance="outline"  fxFlex="calc(90%-20px)">
           <textarea formControlName="name" matInput placeholder="New Fund"></textarea>
             <mat-error *ngIf="fundForm.controls.name.hasError('required')">
                 <strong>Required field</strong>

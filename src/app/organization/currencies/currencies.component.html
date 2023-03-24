@@ -10,7 +10,7 @@
 <div class="container">
 
   <div #filter fxLayout="row" fxLayoutGap="20px">
-    <mat-form-field fxFlex>
+    <mat-form-field appearance="outline"  fxFlex>
       <mat-label >Filter</mat-label>
       <input matInput (keyup)="applyFilter($event.target.value)">
     </mat-form-field>

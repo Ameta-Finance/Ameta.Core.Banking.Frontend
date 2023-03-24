@@ -8,17 +8,17 @@
 
         <div fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column">
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Office</mat-label>
             <input matInput required autofocus [value]="cashierData.template.officeName" disabled>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Teller Name</mat-label>
             <input matInput required autofocus [value]="cashierData.data.tellerName" disabled>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%" *ngIf="isStaffId">
+          <mat-form-field appearance="outline"  fxFlex="48%" *ngIf="isStaffId">
             <mat-label>Cashier</mat-label>
             <mat-select formControlName="staffId">
               <mat-option *ngFor="let staff of cashierData.template.staffOptions" [value]="staff.id">
@@ -27,7 +27,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%" *ngIf="!isStaffId">
+          <mat-form-field appearance="outline"  fxFlex="48%" *ngIf="!isStaffId">
             <mat-label>Cashier</mat-label>
             <mat-select formControlName="staffId" *ngIf="!isStaffId">
               <mat-option [value]="cashierData.data.staffId">
@@ -36,12 +36,12 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Description/Notes</mat-label>
             <input matInput autofocus formControlName="description">
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%" (click)="fromDatePicker.open()">
+          <mat-form-field appearance="outline"  fxFlex="48%" (click)="fromDatePicker.open()">
             <mat-label>From</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="fromDatePicker" required formControlName="startDate">
             <mat-datepicker-toggle matSuffix [for]="fromDatePicker"></mat-datepicker-toggle>
@@ -51,7 +51,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%" (click)="toDatePicker.open()">
+          <mat-form-field appearance="outline"  fxFlex="48%" (click)="toDatePicker.open()">
             <mat-label>To</mat-label>
             <input matInput [min]="editCashierForm.value.startDate" [max]="maxDate" [matDatepicker]="toDatePicker" required formControlName="endDate">            <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>
             <mat-datepicker #toDatePicker></mat-datepicker>

@@ -2,7 +2,7 @@
 
   <div fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column">
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Product Name</mat-label>
       <input matInput formControlName="name" matTooltip="A unique identifier for the share product" required>
       <mat-error>
@@ -10,7 +10,7 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Short Name</mat-label>
       <input matInput formControlName="shortName" matTooltip="A unique identifier for the share product" maxlength="4" required>
       <mat-error>
@@ -18,7 +18,7 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field fxFlex="98%">
+    <mat-form-field appearance="outline"  fxFlex="98%">
       <mat-label>Description</mat-label>
       <textarea matInput formControlName="description" matTooltip="Provides additional information regarding the purpose and characteristics of the share product" required></textarea>
     </mat-form-field>

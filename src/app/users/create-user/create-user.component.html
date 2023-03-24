@@ -8,7 +8,7 @@
 
         <div #userFormRef fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column">
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Username</mat-label>
             <input matInput required formControlName="username">
             <mat-error *ngIf="userForm.controls.username.hasError('required')">
@@ -16,7 +16,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Email</mat-label>
             <input matInput [required]="userForm.controls.sendPasswordToEmail.value" formControlName="email">
             <mat-error *ngIf="userForm.controls.email.hasError('email')">
@@ -27,7 +27,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>First Name</mat-label>
             <input matInput required formControlName="firstname">
             <mat-error *ngIf="userForm.controls.firstname.hasError('pattern')">
@@ -38,7 +38,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Last Name</mat-label>
             <input matInput required formControlName="lastname">
             <mat-error *ngIf="userForm.controls.lastname.hasError('pattern')">
@@ -61,7 +61,7 @@
             </mat-checkbox>
           </div>
 
-          <mat-form-field fxFlex="48%" *ngIf="!userForm.controls.sendPasswordToEmail.value">
+          <mat-form-field appearance="outline"  fxFlex="48%" *ngIf="!userForm.controls.sendPasswordToEmail.value">
             <mat-label>Password</mat-label>
             <input matInput required type="password" formControlName="password">
             <mat-error *ngIf="userForm.controls.password.hasError('required')">
@@ -69,7 +69,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%" *ngIf="!userForm.controls.sendPasswordToEmail.value">
+          <mat-form-field appearance="outline"  fxFlex="48%" *ngIf="!userForm.controls.sendPasswordToEmail.value">
             <mat-label>Repeat Password</mat-label>
             <input matInput required type="password" formControlName="repeatPassword">
             <mat-error *ngIf="userForm.controls.repeatPassword.hasError('required')">
@@ -82,7 +82,7 @@
           Passwords <strong>do not match</strong>
           </p>      
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Office</mat-label>
             <mat-select required formControlName="officeId">
               <mat-option *ngFor="let office of officesData" [value]="office.id">
@@ -94,7 +94,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Staff</mat-label>
             <mat-select formControlName="staffId">
               <mat-option *ngFor="let staff of staffData" [value]="staff.id">
@@ -103,7 +103,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Roles</mat-label>
             <mat-select required formControlName="roles" multiple>
               <mat-option *ngFor="let role of rolesData" [value]="role.id">

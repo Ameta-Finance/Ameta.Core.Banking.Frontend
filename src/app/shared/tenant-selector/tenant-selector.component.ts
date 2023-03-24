@@ -11,7 +11,7 @@ export class TenantSelectorComponent implements OnInit {
 
   /** Tenant selector form control. */
   tenantSelector = new FormControl();
-
+  
   /**
    * Sets the Tenant Identifier of the application in the selector on initial setup.
    * @param {SettingsService} settingsService Settings Service.

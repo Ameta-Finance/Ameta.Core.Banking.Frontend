@@ -8,7 +8,7 @@
 
         <div fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column">
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Entity</mat-label>
             <mat-select formControlName="entity">
               <mat-option *ngFor="let entity of editTemplateData.entities" [value]="entity.id">
@@ -17,7 +17,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Type</mat-label>
             <mat-select formControlName="type">
               <mat-option *ngFor="let type of editTemplateData.types" [value]="type.id">
@@ -26,7 +26,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Name</mat-label>
             <input matInput formControlName="name">
           </mat-form-field>
@@ -47,12 +47,12 @@
 
       <div *ngFor="let mapper of mappers; index as i" fxLayout="row" fxLayoutGap="2%">
 
-        <mat-form-field fxFlex="43%">
+        <mat-form-field appearance="outline"  fxFlex="43%">
           <mat-label>Mapper Key</mat-label>
           <input matInput [formControl]="mapper.mapperskey">
         </mat-form-field>
 
-        <mat-form-field fxFlex="43%">
+        <mat-form-field appearance="outline"  fxFlex="43%">
           <mat-label>Mapper Value</mat-label>
           <input matInput [formControl]="mapper.mappersvalue">
         </mat-form-field>

@@ -1,6 +1,6 @@
 <div class="container space-top" fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column">
 
-  <mat-form-field fxFlex="31%">
+  <mat-form-field appearance="outline"  fxFlex="31%">
     <mat-label>Job Name</mat-label>
     <mat-select [formControl]="jobName" (selectionChange)="getWorkflowJobSteps($event.value)">
       <mat-option *ngFor="let job of jobNameOptions" [value]="job">

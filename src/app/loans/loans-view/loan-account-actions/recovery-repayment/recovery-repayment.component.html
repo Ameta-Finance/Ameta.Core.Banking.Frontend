@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field (click)="transactionDatePicker.open()">
+         <mat-form-field appearance="outline" (click)="transactionDatePicker.open()">
             <mat-label>Transaction Date</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="transactionDatePicker" required
               formControlName="transactionDate">
@@ -19,7 +19,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Transaction Amount</mat-label>
             <input matInput required formControlName="transactionAmount">
             <mat-error *ngIf="recoveryRepaymentLoanForm.controls.transactionAmount.hasError('required')">
@@ -27,7 +27,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Payment Type</mat-label>
             <mat-select formControlName="paymentTypeId">
               <mat-option *ngFor="let paymentType of paymentTypes" [value]="paymentType.id">
@@ -47,33 +47,33 @@
           </div>
 
           <ng-container *ngIf="showPaymentDetails">
-            <mat-form-field>
+            <mat-form-field appearance="outline">
               <mat-label> Account #</mat-label>
               <input matInput formControlName="accountNumber">
             </mat-form-field>
 
-            <mat-form-field>
+            <mat-form-field appearance="outline">
               <mat-label>Cheque #</mat-label>
               <input matInput formControlName="checkNumber">
             </mat-form-field>
 
-            <mat-form-field>
+            <mat-form-field appearance="outline">
               <mat-label>Routing Code</mat-label>
               <input matInput formControlName="routingCode">
             </mat-form-field>
 
-            <mat-form-field>
+            <mat-form-field appearance="outline">
               <mat-label>Reciept #</mat-label>
               <input matInput formControlName="receiptNumber">
             </mat-form-field>
 
-            <mat-form-field>
+            <mat-form-field appearance="outline">
               <mat-label>Bank #</mat-label>
               <input matInput formControlName="bankNumber">
             </mat-form-field>
           </ng-container>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Note</mat-label>
             <textarea matInput formControlName="note" cdkTextareaAutosize cdkAutosizeMinRows="2"></textarea>
           </mat-form-field>

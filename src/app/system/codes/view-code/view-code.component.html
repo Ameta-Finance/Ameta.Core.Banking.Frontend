@@ -35,7 +35,7 @@
 
           <div fxFlexFill fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column" [formGroupName]="i">
 
-            <mat-form-field fxFlex="20%">
+            <mat-form-field appearance="outline"  fxFlex="20%">
               <mat-label>Name</mat-label>
               <input required matInput formControlName="name">
               <mat-error *ngIf="codeValues.at(i).controls.name.hasError('required')">
@@ -43,12 +43,12 @@
               </mat-error>
             </mat-form-field>
 
-            <mat-form-field fxFlex="22%">
+            <mat-form-field appearance="outline"  fxFlex="22%">
               <mat-label>Description</mat-label>
               <input matInput formControlName="description">
             </mat-form-field>
 
-            <mat-form-field fxFlex="18%">
+            <mat-form-field appearance="outline"  fxFlex="18%">
               <mat-label>Position</mat-label>
               <input required matInput formControlName="position" type="number">
               <mat-error *ngIf="codeValues.at(i).controls.position.hasError('required')">

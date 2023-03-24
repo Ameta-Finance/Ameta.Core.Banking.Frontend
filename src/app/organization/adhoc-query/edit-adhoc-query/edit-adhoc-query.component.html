@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Name</mat-label>
             <input matInput required formControlName="name">
             <mat-error *ngIf="editAdhocQueryForm.controls.name.hasError('required')">
@@ -16,7 +16,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>SQL Query</mat-label>
             <textarea matInput required formControlName="query"></textarea>
             <mat-error *ngIf="editAdhocQueryForm.controls.query.hasError('required')">
@@ -24,7 +24,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Insert into table</mat-label>
             <input matInput required formControlName="tableName">
             <mat-error *ngIf="editAdhocQueryForm.controls.tableName.hasError('required')">
@@ -32,7 +32,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Table Fields</mat-label>
             <textarea matInput required formControlName="tableFields"></textarea>
             <mat-error *ngIf="editAdhocQueryForm.controls.tableFields.hasError('required')">
@@ -40,7 +40,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Email</mat-label>
             <input matInput formControlName="email">
             <mat-error *ngIf="editAdhocQueryForm.controls.email.hasError('email')">
@@ -48,7 +48,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Report Run Frequency</mat-label>
             <mat-select formControlName="reportRunFrequency">
               <mat-option *ngFor="let reportRunFrequency of reportRunFrequencyData" [value]="reportRunFrequency.id">
@@ -57,7 +57,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field *ngIf="editAdhocQueryForm.controls.reportRunFrequency.value === 5">
+          <mat-form-field appearance="outline"  *ngIf="editAdhocQueryForm.controls.reportRunFrequency.value === 5">
             <mat-label>Custom Report Run Frequency (Days)</mat-label>
             <input type="number" matInput required formControlName="reportRunEvery">
             <mat-error *ngIf="editAdhocQueryForm.controls.reportRunEvery.hasError('required')">

@@ -13,7 +13,7 @@
 
     <div fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column" fxLayoutAlign.gt-sm="start center">
 
-      <mat-form-field fxFlex="98%">
+      <mat-form-field appearance="outline"  fxFlex="98%">
         <mat-label>Branch Office</mat-label>
         <mat-select formControlName="officeId" required>
           <mat-option *ngFor="let office of officesData" [value]="office.id">
@@ -25,7 +25,7 @@
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field fxFlex="98%" (click)="transactionDatePicker.open()">
+      <mat-form-field appearance="outline"  fxFlex="98%" (click)="transactionDatePicker.open()">
         <mat-label>Repayment date</mat-label>
         <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="transactionDatePicker" required
           formControlName="transactionDate">
@@ -36,7 +36,7 @@
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field fxFlex="98%">
+      <mat-form-field appearance="outline"  fxFlex="98%">
         <mat-label>Staff</mat-label>
         <mat-select formControlName="staffId">
           <mat-option *ngFor="let loanOfficer of loanOfficerData" [value]="loanOfficer.id">

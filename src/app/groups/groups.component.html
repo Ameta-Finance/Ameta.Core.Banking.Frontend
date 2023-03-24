@@ -2,7 +2,7 @@
 
   <div fxLayout="row" fxLayoutAlign="start center">
     <div class="search-box">
-      <mat-form-field>
+      <mat-form-field appearance="outline">
         <input matInput placeholder="Search by Name" [formControl]="name">
       </mat-form-field>
       <mat-checkbox #showClosedGroups labelPosition="after" (change)="changeShowClosedGroups()">Show Closed Groups</mat-checkbox>

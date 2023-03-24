@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field (click)="transactionsDatePicker.open()">
+         <mat-form-field appearance="outline" (click)="transactionsDatePicker.open()">
             <mat-label>Transaction Date</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="transactionsDatePicker" required
               formControlName="transactionDate">
@@ -19,32 +19,32 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Principal</mat-label>
             <input matInput formControlName="outstandingPrincipalPortion">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Interest</mat-label>
             <input matInput formControlName="outstandingInterestPortion">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Fee Amount</mat-label>
             <input matInput formControlName="outstandingFeeChargesPortion">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Penalty Amount</mat-label>
             <input matInput required formControlName="outstandingPenaltyChargesPortion">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Transaction Amount</mat-label>
             <input matInput required formControlName="transactionAmount">
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Note</mat-label>
             <textarea matInput formControlName="note" cdkTextareaAutosize cdkAutosizeMinRows="2"></textarea>
           </mat-form-field>

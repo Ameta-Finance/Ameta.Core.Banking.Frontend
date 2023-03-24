@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Name</mat-label>
             <input matInput required autofocus formControlName="name">
             <mat-error *ngIf="holidayForm.controls.name.hasError('required')">
@@ -16,7 +16,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field *ngIf="!isActiveHoliday" (click)="fromDatePicker.open()">
+          <mat-form-field appearance="outline"  *ngIf="!isActiveHoliday" (click)="fromDatePicker.open()">
             <mat-label>From Date</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="fromDatePicker" required formControlName="fromDate">
             <mat-datepicker-toggle matSuffix [for]="fromDatePicker"></mat-datepicker-toggle>
@@ -26,7 +26,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field *ngIf="!isActiveHoliday" (click)="toDatePicker.open()">
+          <mat-form-field appearance="outline"  *ngIf="!isActiveHoliday" (click)="toDatePicker.open()">
             <mat-label>To Date</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="toDatePicker" required formControlName="toDate">
             <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>
@@ -36,7 +36,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field *ngIf="!isActiveHoliday">
+          <mat-form-field appearance="outline"  *ngIf="!isActiveHoliday">
             <mat-label>Repayment Scheduling Type</mat-label>
             <mat-select required formControlName="reschedulingType">
               <mat-option *ngFor="let repayments of holidayData.repaymentSchedulingTypes" [value]="repayments.id">
@@ -48,7 +48,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field *ngIf="!isActiveHoliday && reSchedulingType === 2" (click)="repaymentDatePicker.open()">
+          <mat-form-field appearance="outline"  *ngIf="!isActiveHoliday && reSchedulingType === 2" (click)="repaymentDatePicker.open()">
             <mat-label>Repayment scheduled to</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="repaymentDatePicker" required formControlName="repaymentsRescheduledTo">
             <mat-datepicker-toggle matSuffix [for]="repaymentDatePicker"></mat-datepicker-toggle>
@@ -58,7 +58,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Description</mat-label>
             <input matInput formControlName="description">
           </mat-form-field>

@@ -9,7 +9,7 @@
 
       <mat-card-content fxLayout="column">
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Reason</mat-label>
           <mat-select required formControlName="reasonForBlock">
             <mat-option *ngFor="let codeValue of reasonOptions" [value]="codeValue.id">
@@ -21,7 +21,7 @@
           </mat-error>
         </mat-form-field>
 
-        <mat-form-field fxFlex (click)="transactionDatePicker.open()" *ngIf="transactionType.holdamount">
+        <mat-form-field appearance="outline"  fxFlex (click)="transactionDatePicker.open()" *ngIf="transactionType.holdamount">
           <mat-label>Transaction Date</mat-label>
           <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="transactionDatePicker" required formControlName="transactionDate">
           <mat-datepicker-toggle matSuffix [for]="transactionDatePicker"></mat-datepicker-toggle>
@@ -31,7 +31,7 @@
           </mat-error>
         </mat-form-field>
 
-        <mat-form-field *ngIf="transactionType.holdamount">
+        <mat-form-field appearance="outline"  *ngIf="transactionType.holdamount">
           <mat-label>Transaction Amount</mat-label>
           <input type="number" formControlName="transactionAmount" required matInput />
           <mat-error *ngIf="manageSavingsAccountForm.controls.transactionAmount.hasError('required')">

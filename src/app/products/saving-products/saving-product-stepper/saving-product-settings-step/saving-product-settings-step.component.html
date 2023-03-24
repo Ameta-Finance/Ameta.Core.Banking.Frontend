@@ -2,19 +2,19 @@
 
   <div fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column" fxLayoutAlign.gt-sm="start center">
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Minimum Opening Balance</mat-label>
       <input type="number" matInput matTooltip="Sets the minimum deposit amount required to open a saving account of this saving product type" formControlName="minRequiredOpeningBalance">
     </mat-form-field>
 
     <span fxFlex="48%" fxHide.lt-md></span>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Lock-in Period</mat-label>
       <input type="number" matInput matTooltip="Used to indicate the length of time that a savings account of this saving product type is locked-in and withdrawals are not allowed" formControlName="lockinPeriodFrequency">
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-select formControlName="lockinPeriodFrequencyType">
         <mat-option *ngFor="let lockinPeriodFrequencyType of lockinPeriodFrequencyTypeData" [value]="lockinPeriodFrequencyType.id">
           {{ lockinPeriodFrequencyType.value }}
@@ -26,7 +26,7 @@
       Apply Withdrawal Fee for Transfers
     </mat-checkbox>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Balance Required for Interest Calculation</mat-label>
       <input type="number" matInput matTooltip="Sets the balance required for interest calculation" formControlName="minBalanceForInterestCalculation">
     </mat-form-field>
@@ -35,7 +35,7 @@
       Enforce Minimum Balance
     </mat-checkbox>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Minimum Balance</mat-label>
       <input type="number" matInput matTooltip="Sets the minimum balance allowed for a saving account" formControlName="minRequiredBalance">
     </mat-form-field>
@@ -44,7 +44,7 @@
       Is Withhold Tax Applicable?
     </mat-checkbox>
 
-    <mat-form-field fxFlex="48%" *ngIf="savingProductSettingsForm.value.withHoldTax">
+    <mat-form-field appearance="outline"  fxFlex="48%" *ngIf="savingProductSettingsForm.value.withHoldTax">
       <mat-label>Tax Group</mat-label>
       <mat-select formControlName="taxGroupId" required>
         <mat-option *ngFor="let taxGroup of taxGroupData" [value]="taxGroup.id">
@@ -66,17 +66,17 @@
 
     <div *ngIf="savingProductSettingsForm.value.allowOverdraft" fxFlexFill fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column">
 
-      <mat-form-field fxFlex="31%">
+      <mat-form-field appearance="outline"  fxFlex="31%">
         <mat-label>Minimum Overdraft Required for Interest Calculation</mat-label>
         <input type="number" matInput matTooltip="Sets the overdraft required for interest calculation" formControlName="minOverdraftForInterestCalculation">
       </mat-form-field>
 
-      <mat-form-field fxFlex="31%">
+      <mat-form-field appearance="outline"  fxFlex="31%">
         <mat-label>Nominal Annual Interest for Overdraft</mat-label>
         <input type="number" matInput matTooltip="Default interest rate on overdraft" formControlName="nominalAnnualInterestRateOverdraft">
       </mat-form-field>
 
-      <mat-form-field fxFlex="31%">
+      <mat-form-field appearance="outline"  fxFlex="31%">
         <mat-label>Maximum Overdraft Amount Limit</mat-label>
         <input type="number" matInput matTooltip="Sets the maximum allowed overdraft amount for a saving account that is allowed to have an overdraft" formControlName="overdraftLimit">
       </mat-form-field>
@@ -93,7 +93,7 @@
 
     <div *ngIf="savingProductSettingsForm.value.isDormancyTrackingActive" fxFlexFill fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column">
 
-      <mat-form-field fxFlex="31%">
+      <mat-form-field appearance="outline"  fxFlex="31%">
         <mat-label>Number of Days to Inactive sub-status</mat-label>
         <input type="number" matInput matTooltip="Consecutive Number of Days of inactive period to mark an account as Inactive" formControlName="daysToInactive" required>
         <mat-error>
@@ -101,7 +101,7 @@
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field fxFlex="31%">
+      <mat-form-field appearance="outline"  fxFlex="31%">
         <mat-label>Number of Days to Dormant sub-status</mat-label>
         <input type="number" matInput matTooltip="Consecutive Number of Days of inactive period to mark an account as Dormant" formControlName="daysToDormancy" required>
         <mat-error>
@@ -109,7 +109,7 @@
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field fxFlex="31%">
+      <mat-form-field appearance="outline"  fxFlex="31%">
         <mat-label>Number of Days to Escheat</mat-label>
         <input type="number" matInput matTooltip="Consecutive Number of Days of inactive period to mark an account as Escheat" formControlName="daysToEscheat" required>
         <mat-error>

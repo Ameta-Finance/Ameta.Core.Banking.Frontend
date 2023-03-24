@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field (click)="requestedDatePicker.open()">
+         <mat-form-field appearance="outline" (click)="requestedDatePicker.open()">
             <mat-label>Request Date</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="requestedDatePicker" required formControlName="requestedDate">
             <mat-datepicker-toggle matSuffix [for]="requestedDatePicker"></mat-datepicker-toggle>
@@ -18,7 +18,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Total No. of Shares</mat-label>
             <input matInput required formControlName="requestedShares">
             <mat-error *ngIf="applySharesForm.controls.requestedShares.hasError('required')">
@@ -26,7 +26,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Today's Price</mat-label>
             <input matInput required formControlName="unitPrice">
           </mat-form-field>

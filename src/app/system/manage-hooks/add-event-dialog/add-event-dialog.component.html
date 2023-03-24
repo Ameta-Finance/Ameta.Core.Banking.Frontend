@@ -6,7 +6,7 @@
 
     <div fxLayout="column">
 
-      <mat-form-field>
+      <mat-form-field appearance="outline">
         <mat-label>Select Grouping</mat-label>
         <mat-select required formControlName="grouping">
           <mat-option *ngFor="let grouping of data.groupings" [value]="grouping.name">
@@ -18,7 +18,7 @@
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field appearance="outline">
         <mat-label>Select Entity</mat-label>
         <mat-select required formControlName="entity">
           <mat-option *ngFor="let entity of entityData" [value]="entity.name">
@@ -30,7 +30,7 @@
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field appearance="outline">
         <mat-label>Select Action</mat-label>
         <mat-select required formControlName="action">
           <mat-option *ngFor="let action of actionData" [value]="action">

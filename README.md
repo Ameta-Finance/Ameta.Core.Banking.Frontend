@@ -1,6 +1,4 @@
-# Mifos X Web App [![Build Status](https://travis-ci.com/openMF/web-app.svg?branch=master)](https://travis-ci.com/openMF/web-app) [![Gitter](https://badges.gitter.im/openMF/web-app.svg)](https://gitter.im/openMF/web-app?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
-Mifos X Web App is the revamped version of the Mifos X Community App, an effective financial inclusion solution and the default web application built on top of the Mifos X platform for the Mifos User Community.
+# Latest Ameta Core Banking Web App
 
 It is a Single-Page App (SPA) written in standard web technologies [HTML5](http://whatwg.org/html), [SCSS](http://sass-lang.com) and [TypeScript](http://www.typescriptlang.org). It leverages the popular [Angular](https://angular.io/) framework and [Angular Material](https://material.angular.io/) for material design components.
 
@@ -70,7 +68,7 @@ To get more help on the Angular CLI use `ng help` or go check out the
 
 ## Setting up a local server
 
-Follow the given instructions for your operating system to setup a local server for the Mifos X platform.
+Follow the given instructions for your operating system to setup a local server for the Ameta Core platform.
 
 [Windows](https://cwiki.apache.org/confluence/display/FINERACT/Fineract-platform+Installation+on+Windows)
 
@@ -95,7 +93,7 @@ docker run -d -p 4200:80 openmf/web-app:latest
 Access the webapp on http://localhost:4200 in your browser.
 
 ### Docker compose
-It is possible to do a 'one-touch' installation of Mifos X Web App using containers (AKA "Docker").
+It is possible to do a 'one-touch' installation of Ameta Core Web App using containers (AKA "Docker").
 Fineract now packs the mifos community-app web UI in it's docker deploy.
 
 As Prerequisites, you must have `docker` and `docker-compose` installed on your machine; see

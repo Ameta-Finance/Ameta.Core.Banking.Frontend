@@ -8,42 +8,42 @@
 
                 <div fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column">
 
-                    <mat-form-field fxFlex="48%">
+                    <mat-form-field appearance="outline"  fxFlex="48%">
                         <mat-label>Name</mat-label>
                         <input matInput required formControlName="name">
                         <mat-error *ngIf="collateralForm.controls.name.hasError('required')">
                             Name is <strong>required</strong>
                         </mat-error>
                     </mat-form-field>
-                    <mat-form-field fxFlex="48%">
+                    <mat-form-field appearance="outline"  fxFlex="48%">
                         <mat-label>Type/Quality</mat-label>
                         <input matInput required formControlName="quality">
                         <mat-error *ngIf="collateralForm.controls.quality.hasError('required')">
                             Quality is <strong>required</strong>
                         </mat-error>
                     </mat-form-field>
-                    <mat-form-field fxFlex="48%">
+                    <mat-form-field appearance="outline"  fxFlex="48%">
                         <mat-label>Unit Type</mat-label>
                         <input matInput required formControlName="unitType">
                         <mat-error *ngIf="collateralForm.controls.unitType.hasError('required')">
                            Unit Type is <strong>required</strong>
                         </mat-error>
                     </mat-form-field>
-                    <mat-form-field fxFlex="48%">
+                    <mat-form-field appearance="outline"  fxFlex="48%">
                         <mat-label>Base Price</mat-label>
                         <input matInput required formControlName="basePrice">
                         <mat-error *ngIf="collateralForm.controls.basePrice.hasError('required')">
                             Base Price is <strong>required</strong>
                         </mat-error>
                     </mat-form-field>
-                    <mat-form-field fxFlex="48%">
+                    <mat-form-field appearance="outline"  fxFlex="48%">
                         <mat-label>Percentage to Base</mat-label>
                         <input matInput required formControlName="pctToBase">
                         <mat-error *ngIf="collateralForm.controls.pctToBase.hasError('required')">
                             Percentage to Base is <strong>required</strong>
                         </mat-error>
                     </mat-form-field>
-                    <mat-form-field fxFlex="48%">
+                    <mat-form-field appearance="outline"  fxFlex="48%">
                         <mat-label>Currency</mat-label>
                         <mat-select required formControlName="currency">
                             <mat-option *ngFor="let currency of collateralTemplateData" [value]="currency.code">

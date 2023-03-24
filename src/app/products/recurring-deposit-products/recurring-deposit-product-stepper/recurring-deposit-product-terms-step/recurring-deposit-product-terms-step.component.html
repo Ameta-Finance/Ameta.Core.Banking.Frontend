@@ -4,12 +4,12 @@
 
     <h4 fxFlex="98%" class="mat-h4">Deposit Amount</h4>
 
-    <mat-form-field fxFlex="31%">
+    <mat-form-field appearance="outline"  fxFlex="31%">
       <mat-label>Minimum</mat-label>
       <input type="number" matInput formControlName="minDepositAmount">
     </mat-form-field>
 
-    <mat-form-field fxFlex="31%">
+    <mat-form-field appearance="outline"  fxFlex="31%">
       <mat-label>Default</mat-label>
       <input type="number" matInput formControlName="depositAmount" required>
       <mat-error>
@@ -17,14 +17,14 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field fxFlex="31%">
+    <mat-form-field appearance="outline"  fxFlex="31%">
       <mat-label>Maximum</mat-label>
       <input type="number" matInput formControlName="maxDepositAmount">
     </mat-form-field>
 
     <mat-divider fxFlex="98%"></mat-divider>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Interest Compounding Period</mat-label>
       <mat-select formControlName="interestCompoundingPeriodType" required>
         <mat-option *ngFor="let interestCompoundingPeriodType of interestCompoundingPeriodTypeData" [value]="interestCompoundingPeriodType.id">
@@ -36,7 +36,7 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Interest Posting Period</mat-label>
       <mat-select formControlName="interestPostingPeriodType" required>
         <mat-option *ngFor="let interestPostingPeriodType of interestPostingPeriodTypeData" [value]="interestPostingPeriodType.id">
@@ -48,7 +48,7 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Interest Calculated using</mat-label>
       <mat-select formControlName="interestCalculationType" required>
         <mat-option *ngFor="let interestCalculationType of interestCalculationTypeData" [value]="interestCalculationType.id">
@@ -60,7 +60,7 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Days in Year</mat-label>
       <mat-select formControlName="interestCalculationDaysInYearType" required>
         <mat-option *ngFor="let interestCalculationDaysInYearType of interestCalculationDaysInYearTypeData" [value]="interestCalculationDaysInYearType.id">

@@ -2,7 +2,7 @@
 
 <div mat-dialog-content [formGroup]="depositProductIncentiveForm" fxLayout="column">
 
-  <mat-form-field>
+  <mat-form-field appearance="outline">
     <mat-label>Attribute</mat-label>
     <mat-select formControlName="attributeName" required>
       <mat-option *ngFor="let attributeName of attributeNameData" [value]="attributeName.id">
@@ -14,7 +14,7 @@
     </mat-error>
   </mat-form-field>
 
-  <mat-form-field>
+  <mat-form-field appearance="outline">
     <mat-label>Condition</mat-label>
     <mat-select formControlName="conditionType" required>
       <mat-option *ngFor="let conditionType of conditionTypeData" [value]="conditionType.id">
@@ -26,7 +26,7 @@
     </mat-error>
   </mat-form-field>
 
-  <mat-form-field *ngIf="depositProductIncentiveForm.value.attributeName">
+  <mat-form-field appearance="outline"  *ngIf="depositProductIncentiveForm.value.attributeName">
     <mat-label>Value</mat-label>
     <mat-select formControlName="attributeValue" *ngIf="depositProductIncentiveForm.value.attributeName !== 3" required>
       <mat-option *ngFor="let attributeValue of attributeValueData" [value]="attributeValue.id">
@@ -39,7 +39,7 @@
     </mat-error>
   </mat-form-field>
 
-  <mat-form-field>
+  <mat-form-field appearance="outline">
     <mat-label>Type</mat-label>
     <mat-select formControlName="incentiveType" required>
       <mat-option *ngFor="let incentiveType of incentiveTypeData" [value]="incentiveType.id">
@@ -51,7 +51,7 @@
     </mat-error>
   </mat-form-field>
 
-  <mat-form-field>
+  <mat-form-field appearance="outline">
     <mat-label>Interest</mat-label>
     <input type="number" matInput formControlName="amount" required>
     <mat-error>

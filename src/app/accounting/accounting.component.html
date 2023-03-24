@@ -118,7 +118,7 @@
 
 <ng-template #templateChartofAccounts let-popover="popover">
   <h2>Chart of Accounts</h2>
-  <p class="mw300">The Chart of Accounts - General Ledger Setup allows you to organize your different accounts within Mifos X.</p>
+  <p class="mw300">The Chart of Accounts - General Ledger Setup allows you to organize your different accounts within Ameta Core.</p>
   <div fxLayout="row" fxLayoutAlign="end" fxLayoutGap="2%" fxLayout.lt-md="column">
     <button mat-raised-button color="warn" (click)="popover.close();configurationWizardService.closeConfigWizard()">Close</button>
     <button mat-raised-button color="primary" (click)="popover.close();previousStepChartofAccounts()">Back</button>
@@ -138,7 +138,7 @@
 
 <ng-template #templateMigrateOpeningBalances let-popover="popover">
   <h2>Migrate opening balances (Office-wise)</h2>
-  <p class="mw400">This makes it easier for an organization wanting to move to Mifos to transfer GL account balances (from their existing accounting application or manual system) to Mifos X Accounting.</p>
+  <p class="mw400">This makes it easier for an organization wanting to move to Mifos to transfer GL account balances (from their existing accounting application or manual system) to Ameta Core Accounting.</p>
   <div fxLayout="row" fxLayoutAlign="end" fxLayoutGap="2%" fxLayout.lt-md="column">
     <button mat-raised-button color="warn" (click)="popover.close();configurationWizardService.closeConfigWizard()">Close</button>
     <button mat-raised-button color="primary" (click)="popover.close();previousStepMigrateOpeningBalances()">Back</button>
@@ -148,7 +148,7 @@
 
 <ng-template #templateClosingEntries let-popover="popover">
   <h2>Closing Entries</h2>
-  <p class="mw300">In Mifos X, you can close accounting to journal entries. Closures can be applied to all branches or to each branch separately. It is important for organizations to close accounting periodically to prevent transactions that affect the accounting books.</p>
+  <p class="mw300">In Ameta Core, you can close accounting to journal entries. Closures can be applied to all branches or to each branch separately. It is important for organizations to close accounting periodically to prevent transactions that affect the accounting books.</p>
   <div fxLayout="row" fxLayoutAlign="end" fxLayoutGap="2%" fxLayout.lt-md="column">
     <button mat-raised-button color="warn" (click)="popover.close();configurationWizardService.closeConfigWizard()">Close</button>
     <button mat-raised-button color="primary" (click)="popover.close();previousStepClosingEntries()">Back</button>

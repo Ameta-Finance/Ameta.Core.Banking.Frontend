@@ -4,7 +4,7 @@
 
       <h4 fxFlex="98%" class="mat-h4">Term Options</h4>
 
-      <mat-form-field fxFlex="48%">
+      <mat-form-field appearance="outline"  fxFlex="48%">
         <mat-label>Loan Term</mat-label>
         <input matInput required formControlName="loanTermFrequency">
         <mat-error *ngIf="loansAccountTermsForm.controls.loanTermFrequency.hasError('required')">
@@ -12,7 +12,7 @@
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field fxFlex="48%">
+      <mat-form-field appearance="outline"  fxFlex="48%">
         <mat-label>Frequency</mat-label>
         <mat-select required formControlName="loanTermFrequencyType">
           <mat-option *ngFor="let type of termFrequencyTypeData" [value]="type.id">
@@ -24,7 +24,7 @@
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field fxFlex="48%">
+      <mat-form-field appearance="outline"  fxFlex="48%">
         <mat-label>Number of repayments</mat-label>
         <input type="number" matInput formControlName="numberOfRepayments">
         <mat-error *ngIf="loansAccountTermsForm.controls.numberOfRepayments.hasError('required')">
@@ -32,7 +32,7 @@
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field fxFlex="48%" (click)="repaymentsPicker.open()">
+      <mat-form-field appearance="outline"  fxFlex="48%" (click)="repaymentsPicker.open()">
         <mat-label>First repayment on</mat-label>
         <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="repaymentsPicker"
           formControlName="repaymentsStartingFromDate">
@@ -42,7 +42,7 @@
 
       <h4 fxFlex="98%" class="mat-h4">Repaid Every</h4>
 
-      <mat-form-field fxFlex="48%">
+      <mat-form-field appearance="outline"  fxFlex="48%">
         <mat-label>Repaid every</mat-label>
         <input matInput required formControlName="repaymentEvery"
           [disabled]="!loansAccountProductTemplate?.product.allowAttributeOverrides.repaymentEvery">
@@ -51,7 +51,7 @@
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field fxFlex="48%">
+      <mat-form-field appearance="outline"  fxFlex="48%">
         <mat-label>Frequency</mat-label>
         <mat-select formControlName="repaymentFrequencyType" required
           [disabled]="!loansAccountProductTemplate?.product.allowAttributeOverrides.repaymentEvery">
@@ -62,7 +62,7 @@
         </mat-select>
       </mat-form-field>
 
-      <mat-form-field fxFlex="48%" *ngIf="loansAccountTermsForm.controls.repaymentFrequencyType.value == 2">
+      <mat-form-field appearance="outline"  fxFlex="48%" *ngIf="loansAccountTermsForm.controls.repaymentFrequencyType.value == 2">
         <mat-label>Select On</mat-label>
         <mat-select formControlName="repaymentFrequencyNthDayType">
           <mat-option
@@ -73,7 +73,7 @@
         </mat-select>
       </mat-form-field>
 
-      <mat-form-field fxFlex="48%" *ngIf="loansAccountTermsForm.controls.repaymentFrequencyType.value == 2">
+      <mat-form-field appearance="outline"  fxFlex="48%" *ngIf="loansAccountTermsForm.controls.repaymentFrequencyType.value == 2">
         <mat-label>Select Day</mat-label>
         <mat-select formControlName="repaymentFrequencyDayOfWeekType">
           <mat-option
@@ -84,7 +84,7 @@
         </mat-select>
       </mat-form-field>
 
-      <mat-form-field fxFlex="48%" (click)="interestPicker.open()">
+      <mat-form-field appearance="outline"  fxFlex="48%" (click)="interestPicker.open()">
         <mat-label>Interest charged from</mat-label>
         <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="interestPicker"
           formControlName="interestChargedFromDate">
@@ -94,12 +94,12 @@
 
     <ng-container *ngIf="!loansAccountProductTemplate?.isLoanProductLinkedToFloatingRate">
 
-      <mat-form-field fxFlex="48%">
+      <mat-form-field appearance="outline"  fxFlex="48%">
         <mat-label>Nominal interest rate</mat-label>
         <input type="number" matInput formControlName="interestRatePerPeriod">
       </mat-form-field>
 
-        <mat-form-field fxFlex="48%">
+        <mat-form-field appearance="outline"  fxFlex="48%">
           <mat-label>Interest method</mat-label>
           <mat-select [disabled]="!loansAccountProductTemplate?.product.allowAttributeOverrides.interestType"
             formControlName="interestType">

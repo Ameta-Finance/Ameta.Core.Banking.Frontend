@@ -8,7 +8,7 @@
 
         <div>
 
-          <mat-form-field fxFlex>
+          <mat-form-field appearance="outline"  fxFlex>
             <mat-label>Client Screen Reports</mat-label>
             <mat-select formControlName="templateId">
               <mat-option *ngFor="let template of templatesData" [value]="template.id">

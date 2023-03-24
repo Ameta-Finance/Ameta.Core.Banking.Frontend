@@ -8,7 +8,7 @@
 
         <div fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column">
 
-          <mat-form-field fxFlex="40%">
+          <mat-form-field appearance="outline"  fxFlex="40%">
             <mat-label>Data Table Name</mat-label>
             <input matInput required formControlName="datatableName">
             <mat-error *ngIf="dataTableForm.controls.datatableName.hasError('required')">
@@ -16,7 +16,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="20%">
+          <mat-form-field appearance="outline"  fxFlex="20%">
             <mat-label>Entity Type</mat-label>
             <mat-select required formControlName="apptableName">
               <mat-option *ngFor="let appTable of appTableData" [value]="appTable.value">
@@ -28,7 +28,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="20%" *ngIf="showEntitySubType">
+          <mat-form-field appearance="outline"  fxFlex="20%" *ngIf="showEntitySubType">
             <mat-label>Entity SubType</mat-label>
             <mat-select formControlName="entitySubType">
               <mat-option *ngFor="let entitySubType of entitySubTypeData" [value]="entitySubType.value">
@@ -37,7 +37,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field fxFlex="20%" *ngIf="showSavingsSubType">
+          <mat-form-field appearance="outline"  fxFlex="20%" *ngIf="showSavingsSubType">
             <mat-label>Savings SubType</mat-label>
             <mat-select formControlName="entitySubType">
               <mat-option *ngFor="let savingsSubType of savingsSubTypeData" [value]="savingsSubType.value">

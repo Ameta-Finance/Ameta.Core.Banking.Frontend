@@ -2,7 +2,7 @@
 
     <div fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column">
 
-      <mat-form-field fxFlex="48%">
+      <mat-form-field appearance="outline"  fxFlex="48%">
         <mat-label>Product Name</mat-label>
         <mat-select formControlName="productId" required>
           <mat-option *ngFor="let product of productData" [value]="product.id">
@@ -14,7 +14,7 @@
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field fxFlex="48%">
+      <mat-form-field appearance="outline"  fxFlex="48%">
         <mat-label>Loan officer</mat-label>
         <mat-select formControlName="loanOfficerId">
           <mat-option *ngFor="let loanOfficer of loanOfficerOptions" [value]="loanOfficer.id">
@@ -24,7 +24,7 @@
       </mat-form-field>
 
 
-      <mat-form-field fxFlex="48%">
+      <mat-form-field appearance="outline"  fxFlex="48%">
         <mat-label>Fund</mat-label>
         <mat-select formControlName="fundId">
           <mat-option *ngFor="let fund of fundOptions" [value]="fund.id">
@@ -33,7 +33,7 @@
         </mat-select>
       </mat-form-field>
 
-      <mat-form-field fxFlex="48%" (click)="submitPicker.open()">
+      <mat-form-field appearance="outline"  fxFlex="48%" (click)="submitPicker.open()">
         <mat-label>Submitted on</mat-label>
         <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="submitPicker" required
           formControlName="submittedOnDate">
@@ -44,7 +44,7 @@
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field fxFlex="48%" (click)="disbursementPicker.open()">
+      <mat-form-field appearance="outline"  fxFlex="48%" (click)="disbursementPicker.open()">
         <mat-label>Disbursement on</mat-label>
         <input matInput [min]="loansAccountDetailsForm.value.submittedOnDate" [max]="maxDate" [matDatepicker]="disbursementPicker" required
           formControlName="expectedDisbursementDate">
@@ -61,7 +61,7 @@
 
       <h3 class="mat-h3" fxFlexFill>Savings Linkage</h3>
 
-      <mat-form-field fxFlex="48%">
+      <mat-form-field appearance="outline"  fxFlex="48%">
         <mat-label>Link savings</mat-label>
         <mat-select formControlName="linkAccountId">
           <mat-option *ngFor="let savingaccount of gsimData" [value]="savingaccount.id">

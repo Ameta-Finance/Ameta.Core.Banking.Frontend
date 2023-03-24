@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Name</mat-label>
             <input matInput required formControlName="name">
             <mat-error *ngIf="editCenterForm.controls.name.hasError('required')">
@@ -19,7 +19,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Staff</mat-label>
             <mat-select formControlName="staffId">
               <mat-option *ngFor="let staff of staffs" [value]="staff.id">
@@ -28,13 +28,13 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>External id</mat-label>
             <input matInput formControlName="externalId">
           </mat-form-field>
 
           <ng-container *ngIf="centerData.status.value=='Pending'" (click)="activatedOnDatePicker.open()">
-            <mat-form-field>
+            <mat-form-field appearance="outline">
               <mat-label>Activation date</mat-label>
               <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="activatedOnDatePicker" required
                 formControlName="activationDate">

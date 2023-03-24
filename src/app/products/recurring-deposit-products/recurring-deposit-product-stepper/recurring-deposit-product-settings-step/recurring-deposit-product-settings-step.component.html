@@ -16,12 +16,12 @@
 
     <h4 fxFlex="98%" class="mat-h4">Lock-in Period</h4>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Frequency</mat-label>
       <input type="number" matInput formControlName="lockinPeriodFrequency">
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Type</mat-label>
       <mat-select formControlName="lockinPeriodFrequencyType">
         <mat-option *ngFor="let lockinPeriodFrequencyType of lockinPeriodFrequencyTypeData"
@@ -33,7 +33,7 @@
 
     <h4 fxFlex="98%" class="mat-h4">Minimum Deposit Term</h4>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Frequency</mat-label>
       <input type="number" matInput formControlName="minDepositTerm" required>
       <mat-error>
@@ -41,7 +41,7 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Frequency Type</mat-label>
       <mat-select formControlName="minDepositTermTypeId" required>
         <mat-option *ngFor="let periodFrequencyType of periodFrequencyTypeData" [value]="periodFrequencyType.id">
@@ -55,12 +55,12 @@
 
     <h4 fxFlex="98%" class="mat-h4">And thereafter, in Multiples of</h4>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Frequency</mat-label>
       <input type="number" matInput formControlName="inMultiplesOfDepositTerm">
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Type</mat-label>
       <mat-select formControlName="inMultiplesOfDepositTermTypeId">
         <mat-option *ngFor="let periodFrequencyType of periodFrequencyTypeData" [value]="periodFrequencyType.id">
@@ -71,12 +71,12 @@
 
     <h4 fxFlex="98%" class="mat-h4">Maximum Deposit Term</h4>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Frequency</mat-label>
       <input type="number" matInput formControlName="maxDepositTerm">
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Type</mat-label>
       <mat-select formControlName="maxDepositTermTypeId">
         <mat-option *ngFor="let periodFrequencyType of periodFrequencyTypeData" [value]="periodFrequencyType.id">
@@ -93,12 +93,12 @@
       Apply Penal Interest (less)
     </mat-checkbox>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Penal Interest (%)</mat-label>
       <input type="number" matInput formControlName="preClosurePenalInterest">
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Period</mat-label>
       <mat-select formControlName="preClosurePenalInterestOnTypeId">
         <mat-option *ngFor="let preClosurePenalInterestOnType of preClosurePenalInterestOnTypeData"
@@ -114,7 +114,7 @@
       Is Withhold Tax Applicable?
     </mat-checkbox>
 
-    <mat-form-field fxFlex="48%" *ngIf="recurringDepositProductSettingsForm.value.withHoldTax">
+    <mat-form-field appearance="outline"  fxFlex="48%" *ngIf="recurringDepositProductSettingsForm.value.withHoldTax">
       <mat-label>Tax Group</mat-label>
       <mat-select formControlName="taxGroupId" required>
         <mat-option *ngFor="let taxGroup of taxGroupData" [value]="taxGroup.id">

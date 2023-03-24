@@ -1,0 +1,211 @@
+
+.container:first-child {
+  margin-bottom: 100px;
+}
+.container {
+  // .mat-elevation-z8 {
+  //   margin-bottom: 100px;
+  // }
+
+  .action-button {
+    margin-left: auto;
+  }
+  .search-button {
+    min-width: 30px;
+    margin: 4px;
+  }
+  .search-box {
+    display: flex;
+    grid-column-gap: 10px;
+    align-items: center;
+  }
+  .search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    span {
+      position: absolute;
+      left: 10px;
+    }
+  }
+  .search {
+    background: #f5f7f9;
+    border: 1px solid #dfe5ec;
+    border-radius: 5px;
+    padding: 4px 16px 4px 30px;
+    max-width: 400px;
+    width: 100%;
+    min-width: 200px;
+    min-height: 32px;
+  }
+}
+
+.activated {
+  background: #e6f9f2;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  /* identical to box height, or 12px */
+  max-width: max-content;
+  /* Green/Dark */
+  padding: 0.5rem;
+  color: #2bae7f;
+  max-width: max-content;
+}
+
+.create-button {
+  background: #2176ff;
+  color: white !important;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.08), inset 0px -1px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 4px 24px;
+  // gap: 10px;
+
+  max-width: max-content;
+}
+
+.cancel-button {
+  padding: 4px 24px;
+
+  max-width: max-content;
+  color: #68778d;
+  /* Action Secondary/Default */
+
+  background: #ffffff;
+  /* Border Neutral/Subdued */
+
+  border: 1px solid #babfc3;
+  /* shadow-button */
+
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.deactivated {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  /* identical to box height, or 12px */
+  max-width: max-content;
+  /* Red/Light */
+  padding: 0.5rem;
+  color: #fc5950;
+
+  background: #ffe7e6;
+  border-radius: 4px;
+}
+
+.deleteText {
+  color: #fc5950;
+}
+
+.delete-modal-content {
+  max-width: 328px;
+  text-align: center;
+}
+
+.deleteButton {
+  min-width: 300px !important;
+  max-height: 42px;
+  color: white;
+
+  background: #fc5950;
+  border-radius: 8px;
+}
+
+.deleteModalButton {
+  margin: 10px auto 5px !important;
+  min-width: 300px !important;
+  height: 44px;
+  color: white;
+
+  background: #fc5950;
+  border-radius: 8px !important;
+}
+
+.emptyStateDiv {
+  padding: 3rem 1rem !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* row-gap: 20px; */
+  gap: 20px;
+}
+
+.emptyStateTitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  /* identical to box height, or 140% */
+
+  text-align: center;
+
+  /* Grey 5 */
+
+  color: #414a58;
+}
+
+.emptyStateBody {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  text-align: center;
+
+  /* Grey 4 */
+
+  color: #68778d;
+}
+
+.cancelModalButton {
+  margin: 20px auto !important;
+  min-width: 300px !important;
+  height: 44px;
+  color: #68778d;
+  /* Action Secondary/Default */
+
+  background: #ffffff;
+  /* Border Neutral/Subdued */
+
+  border: 1px solid #babfc3;
+  /* shadow-button */
+
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 8px !important;
+}
+
+.pending {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  /* identical to box height, or 12px */
+  max-width: max-content;
+  /* Orange / Hard */
+  padding: 0.5rem;
+  color: #eb9600;
+  background: #ffedcc;
+  border-radius: 4px;
+  max-width: max-content;
+}
+
+// .div{
+//   width: min-content;
+// }
+
+.tableSearch {
+  max-width: 318px !important;
+  width: 100%;
+  height: 44px !important;
+  left: 134px;
+  top: 213px;
+
+  background: #f5f7f9 !important;
+  border: 1px solid #dfe5ec !important;
+  border-radius: 5px !important;
+}

@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field (click)="closureDatePicker.open()">
+         <mat-form-field appearance="outline" (click)="closureDatePicker.open()">
             <mat-label>Closed On Date</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="closureDatePicker" required formControlName="closureDate">
             <mat-datepicker-toggle matSuffix [for]="closureDatePicker"></mat-datepicker-toggle>
@@ -18,7 +18,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Closure Reason</mat-label>
             <mat-select formControlName="closureReasonId">
               <mat-option *ngFor="let reason of closureData" [value]="reason.id">

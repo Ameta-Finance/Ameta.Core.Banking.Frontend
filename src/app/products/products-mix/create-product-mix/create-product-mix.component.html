@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Product</mat-label>
             <mat-select required formControlName="productId">
               <mat-option *ngFor="let productOption of productOptionData" [value]="productOption.id">
@@ -20,7 +20,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field *ngIf="productData">
+          <mat-form-field appearance="outline"  *ngIf="productData">
             <mat-label>Restricted products</mat-label>
             <mat-select required formControlName="restrictedProducts" multiple>
               <mat-option *ngFor="let product of productData" [value]="product.id">

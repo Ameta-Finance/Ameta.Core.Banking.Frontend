@@ -8,7 +8,7 @@
 
         <div fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column">
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Charge Applies To</mat-label>
             <mat-select required formControlName="chargeAppliesTo">
               <mat-option *ngFor="let chargeAppliesTo of chargesTemplateData.chargeAppliesToOptions" [value]="chargeAppliesTo.id">
@@ -24,7 +24,7 @@
 
           <div *ngIf="chargeForm.controls.chargeAppliesTo.value" fxFlexFill fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column">
 
-            <mat-form-field fxFlex="48%">
+            <mat-form-field appearance="outline"  fxFlex="48%">
               <mat-label>Charge Name</mat-label>
               <input matInput required formControlName="name">
               <mat-error *ngIf="chargeForm.controls.name.hasError('required')">
@@ -32,7 +32,7 @@
               </mat-error>
             </mat-form-field>
 
-            <mat-form-field fxFlex="48%">
+            <mat-form-field appearance="outline"  fxFlex="48%">
               <mat-label>Currency</mat-label>
               <mat-select required formControlName="currencyCode">
                 <mat-option *ngFor="let currency of chargesTemplateData.currencyOptions" [value]="currency.code">
@@ -44,7 +44,7 @@
               </mat-error>
             </mat-form-field>
 
-            <mat-form-field fxFlex="48%">
+            <mat-form-field appearance="outline"  fxFlex="48%">
               <mat-label>Charge Time Type</mat-label>
               <mat-select required formControlName="chargeTimeType">
                 <mat-option *ngFor="let chargeTimeType of chargeTimeTypeData" [value]="chargeTimeType.id">
@@ -56,7 +56,7 @@
               </mat-error>
             </mat-form-field>
 
-            <mat-form-field fxFlex="48%">
+            <mat-form-field appearance="outline"  fxFlex="48%">
               <mat-label>Charge Calculation Type</mat-label>
               <mat-select required formControlName="chargeCalculationType">
                 <mat-option *ngFor="let chargeCalculationType of filteredChargeCalculationType()" [value]="chargeCalculationType.id">
@@ -68,7 +68,7 @@
               </mat-error>
             </mat-form-field>
 
-            <mat-form-field *ngIf="chargeForm.controls.chargeAppliesTo.value === 1" fxFlex="48%">
+            <mat-form-field appearance="outline"  *ngIf="chargeForm.controls.chargeAppliesTo.value === 1" fxFlex="48%">
               <mat-label>Charge Payment Mode</mat-label>
               <mat-select required formControlName="chargePaymentMode">
                 <mat-option *ngFor="let chargePaymentMode of chargesTemplateData.chargePaymetModeOptions" [value]="chargePaymentMode.id">
@@ -86,7 +86,7 @@
               </mat-checkbox>
             </div>
 
-            <mat-form-field *ngIf="chargeForm.controls.chargeTimeType.value === 9 && chargeForm.controls.addFeeFrequency.value" fxFlex="48%">
+            <mat-form-field appearance="outline"  *ngIf="chargeForm.controls.chargeTimeType.value === 9 && chargeForm.controls.addFeeFrequency.value" fxFlex="48%">
               <mat-label>Frequency Interval</mat-label>
               <input matInput required formControlName="feeInterval">
               <mat-error *ngIf="chargeForm.controls.feeInterval.hasError('required')">
@@ -97,7 +97,7 @@
               </mat-error>
             </mat-form-field>
 
-            <mat-form-field *ngIf="chargeForm.controls.chargeTimeType.value === 9 && chargeForm.controls.addFeeFrequency.value" fxFlex="48%">
+            <mat-form-field appearance="outline"  *ngIf="chargeForm.controls.chargeTimeType.value === 9 && chargeForm.controls.addFeeFrequency.value" fxFlex="48%">
               <mat-label>Charge Frequency</mat-label>
               <mat-select required formControlName="feeFrequency">
                 <mat-option *ngFor="let feeFrequency of chargesTemplateData.feeFrequencyOptions" [value]="feeFrequency.id">
@@ -109,7 +109,7 @@
               </mat-error>
             </mat-form-field>
 
-            <mat-form-field (click)="dueDatePicker.open()" *ngIf="chargeForm.controls.chargeTimeType.value === 6 || chargeForm.controls.chargeTimeType.value === 7" fxFlex="48%">
+           <mat-form-field appearance="outline" (click)="dueDatePicker.open()" *ngIf="chargeForm.controls.chargeTimeType.value === 6 || chargeForm.controls.chargeTimeType.value === 7" fxFlex="48%">
               <mat-label>Due Date</mat-label>
               <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="dueDatePicker" required formControlName="feeOnMonthDay">
               <mat-datepicker-toggle matSuffix [for]="dueDatePicker"></mat-datepicker-toggle>
@@ -119,7 +119,7 @@
               </mat-error>
             </mat-form-field>
 
-            <mat-form-field fxFlex="48%" *ngIf="chargeForm.controls.chargeTimeType.value === 7 || chargeForm.controls.chargeTimeType.value === 11">
+            <mat-form-field appearance="outline"  fxFlex="48%" *ngIf="chargeForm.controls.chargeTimeType.value === 7 || chargeForm.controls.chargeTimeType.value === 11">
               <mat-label>Repeat Every ({{ repeatEveryLabel }})</mat-label>
               <input matInput required formControlName="feeInterval">
               <mat-error *ngIf="chargeForm.controls.feeInterval.hasError('required')">
@@ -133,7 +133,7 @@
               </mat-error>
             </mat-form-field>
 
-            <mat-form-field fxFlex="48%">
+            <mat-form-field appearance="outline"  fxFlex="48%">
               <mat-label>Amount</mat-label>
               <input matInput required formControlName="amount">
               <mat-error *ngIf="chargeForm.controls.amount.hasError('required')">
@@ -147,12 +147,12 @@
               </mat-error>
             </mat-form-field>
 
-            <mat-form-field fxFlex="48%">
+            <mat-form-field appearance="outline"  fxFlex="48%">
               <mat-label>Minimum Charge Cap</mat-label>
               <input matInput formControlName="minCap">
             </mat-form-field>
 
-            <mat-form-field fxFlex="48%">
+            <mat-form-field appearance="outline"  fxFlex="48%">
               <mat-label>Maximum Charge Cap</mat-label>
               <input matInput formControlName="maxCap">
             </mat-form-field>
@@ -171,7 +171,7 @@
               </div>
             </div>
 
-            <mat-form-field *ngIf="chargeForm.controls.chargeAppliesTo.value === 3" fxFlex="48%">
+            <mat-form-field appearance="outline"  *ngIf="chargeForm.controls.chargeAppliesTo.value === 3" fxFlex="48%">
               <mat-label>Income from Charge </mat-label>
               <mat-select formControlName="incomeAccountId">
                 <mat-option *ngFor="let incomeOrLiabilityAccount of incomeAndLiabilityAccountData" [value]="incomeOrLiabilityAccount.id">
@@ -180,7 +180,7 @@
               </mat-select>
             </mat-form-field>
 
-            <mat-form-field fxFlex="48%">
+            <mat-form-field appearance="outline"  fxFlex="48%">
               <mat-label>Tax Group</mat-label>
               <mat-select formControlName="taxGroupId">
                 <mat-option *ngFor="let taxGroup of chargesTemplateData.taxGroupOptions" [value]="taxGroup.id">

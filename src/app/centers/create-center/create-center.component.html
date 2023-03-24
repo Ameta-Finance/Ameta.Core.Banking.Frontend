@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Name</mat-label>
             <input matInput required formControlName="name">
             <mat-error *ngIf="centerForm.controls.name.hasError('required')">
@@ -19,7 +19,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Office</mat-label>
             <mat-select required formControlName="officeId">
               <mat-option *ngFor="let office of officeData" [value]="office.id">
@@ -31,7 +31,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Staff</mat-label>
             <mat-select formControlName="staffId">
               <mat-option *ngFor="let staff of staffData" [value]="staff.id">
@@ -44,7 +44,7 @@
             Active
           </mat-checkbox>
 
-          <mat-form-field *ngIf="this.centerForm.controls.active.value" (click)="activationDatePicker.open()">
+          <mat-form-field appearance="outline"  *ngIf="this.centerForm.controls.active.value" (click)="activationDatePicker.open()">
             <mat-label>Activation Date</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="activationDatePicker" required formControlName="activationDate">
             <mat-datepicker-toggle matSuffix [for]="activationDatePicker"></mat-datepicker-toggle>
@@ -54,12 +54,12 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>External id</mat-label>
             <input matInput formControlName="externalId">
           </mat-form-field>
 
-          <mat-form-field (click)="submittedOnDatePicker.open()">
+         <mat-form-field appearance="outline" (click)="submittedOnDatePicker.open()">
             <mat-label>Submitted on</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="submittedOnDatePicker" required formControlName="submittedOnDate">
             <mat-datepicker-toggle matSuffix [for]="submittedOnDatePicker"></mat-datepicker-toggle>
@@ -69,7 +69,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Select and Add groups</mat-label>
             <mat-select [formControl]="groupChoice">
               <mat-option *ngFor="let group of groupsData" [value]="group">

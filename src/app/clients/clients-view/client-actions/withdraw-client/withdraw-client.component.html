@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field (click)="withdrawalDatePicker.open()">
+         <mat-form-field appearance="outline" (click)="withdrawalDatePicker.open()">
             <mat-label>Withdrawal Date</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="withdrawalDatePicker" required formControlName="withdrawalDate">
             <mat-datepicker-toggle matSuffix [for]="withdrawalDatePicker"></mat-datepicker-toggle>
@@ -18,7 +18,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>Withdrawal Reason</mat-label>
             <mat-select formControlName="withdrawalReasonId">
               <mat-option *ngFor="let reason of withdrawalData" [value]="reason.id">

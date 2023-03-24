@@ -6,7 +6,7 @@
 
       <mat-card-content fxLayout="column">
 
-        <mat-form-field (click)="dueDatePicker.open()">
+       <mat-form-field appearance="outline" (click)="dueDatePicker.open()">
           <mat-label>Transaction Date</mat-label>
           <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="dueDatePicker"
             formControlName="transactionDate" required>
@@ -17,7 +17,7 @@
           </mat-error>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Transaction Amount</mat-label>
           <input type="number" formControlName="transactionAmount" required matInput />
           <mat-error *ngIf="editTransactionForm.controls.transactionAmount.hasError('required')">
@@ -25,7 +25,7 @@
           </mat-error>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Payment Type</mat-label>
           <mat-select formControlName="paymentTypeId">
             <mat-option *ngFor="let paymentType of paymentTypeOptions" [value]="paymentType.id">
@@ -44,27 +44,27 @@
           </span>
         </div>
 
-        <mat-form-field *ngIf="editTransactionForm.controls['accountNumber']">
+        <mat-form-field appearance="outline"  *ngIf="editTransactionForm.controls['accountNumber']">
           <mat-label>Account Number</mat-label>
           <input type="number" formControlName="accountNumber" matInput />
         </mat-form-field>
 
-        <mat-form-field *ngIf="editTransactionForm.controls['checkNumber']">
+        <mat-form-field appearance="outline"  *ngIf="editTransactionForm.controls['checkNumber']">
           <mat-label>Cheque</mat-label>
           <input type="number" formControlName="checkNumber" matInput />
         </mat-form-field>
 
-        <mat-form-field *ngIf="editTransactionForm.controls['routingCode']">
+        <mat-form-field appearance="outline"  *ngIf="editTransactionForm.controls['routingCode']">
           <mat-label>Routing Code</mat-label>
           <input formControlName="routingCode" matInput />
         </mat-form-field>
 
-        <mat-form-field *ngIf="editTransactionForm.controls['receiptNumber']">
+        <mat-form-field appearance="outline"  *ngIf="editTransactionForm.controls['receiptNumber']">
           <mat-label>Receipt Number</mat-label>
           <input formControlName="receiptNumber" matInput />
         </mat-form-field>
 
-        <mat-form-field *ngIf="editTransactionForm.controls['bankNumber']">
+        <mat-form-field appearance="outline"  *ngIf="editTransactionForm.controls['bankNumber']">
           <mat-label>Bank</mat-label>
           <input formControlName="bankNumber" matInput />
         </mat-form-field>

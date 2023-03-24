@@ -1,11 +1,11 @@
 <div *ngIf="searchVisible" class="search-bar" fxFlex="auto" fxHide.lt-sm="true" fxLayout="row" fxLayoutGap="2%" [@fadeInOut]>
 
-  <mat-form-field class="search">
+  <mat-form-field appearance="outline" class="search">
     <mat-label>Search</mat-label>
     <input matInput type="text" [formControl]="query" (keydown.enter)="search()">
   </mat-form-field>
 
-  <mat-form-field class="resource">
+  <mat-form-field appearance="outline" class="resource">
     <mat-label>Resource</mat-label>
     <mat-select [formControl]="resource">
       <mat-option *ngFor="let option of resourceOptions" [value]="option.value">
@@ -18,6 +18,6 @@
 
 <div class="search-icon">
   <button mat-icon-button (click)="toggleSearchVisibility()" fxHide.lt-sm="true">
-    <fa-icon icon="search" size="lg" matTooltip="Search"></fa-icon>
+    <fa-icon icon="search" size="lg"  style="color:'#808080'" matTooltip="Search"></fa-icon>
   </button>
 </div>

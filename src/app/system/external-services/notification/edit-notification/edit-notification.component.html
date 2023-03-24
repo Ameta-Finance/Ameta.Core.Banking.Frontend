@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Server Key</mat-label>
             <input matInput required formControlName="server_key">
             <mat-error *ngIf="notificationConfigurationForm.controls.server_key.hasError('required')">
@@ -16,7 +16,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>GCM End Point</mat-label>
             <input matInput required formControlName="gcm_end_point">
             <mat-error *ngIf="notificationConfigurationForm.controls.gcm_end_point.hasError('required')">
@@ -24,7 +24,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>FCM End Point</mat-label>
             <input matInput required formControlName="fcm_end_point">
             <mat-error *ngIf="notificationConfigurationForm.controls.fcm_end_point.hasError('required')">

@@ -12,7 +12,7 @@
 
         <ng-container *ngIf="ReportForm.contains(param.name)">
 
-          <mat-form-field fxFlex="48%" *ngSwitchCase="'text'">
+          <mat-form-field appearance="outline"  fxFlex="48%" *ngSwitchCase="'text'">
             <mat-label>{{param.label}}</mat-label>
             <input matInput required [formControlName]="param.name">
             <mat-error *ngIf="ReportForm.controls[param.name].hasError('required')">
@@ -20,7 +20,7 @@
             </mat-error>
           </mat-form-field>
   
-          <mat-form-field fxFlex="48%" *ngSwitchCase="'date'" (click)="runReportDatePicker.open()">
+          <mat-form-field appearance="outline"  fxFlex="48%" *ngSwitchCase="'date'" (click)="runReportDatePicker.open()">
             <mat-label>{{param.label}}</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="runReportDatePicker" required
               [formControlName]="param.name">
@@ -31,7 +31,7 @@
             </mat-error>
           </mat-form-field>
   
-          <mat-form-field fxFlex="48%" *ngSwitchCase="'select'">
+          <mat-form-field appearance="outline"  fxFlex="48%" *ngSwitchCase="'select'">
             <mat-label>{{param.label}}</mat-label>
             <mat-select required [formControlName]="param.name">
               <mat-option *ngFor="let option of param.selectOptions" [value]="option">

@@ -2,7 +2,7 @@
 <div>
   <form [formGroup]="uploadDocumentForm" fxLayout="column">
 
-    <mat-form-field fxFlex>
+    <mat-form-field appearance="outline"  fxFlex>
       <mat-label>File Name</mat-label>
       <input formControlName="fileName" required matInput />
       <mat-error *ngIf="uploadDocumentForm.controls.fileName.hasError('required')">
@@ -10,7 +10,7 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field fxFlex *ngIf="!documentIdentifier">
+    <mat-form-field appearance="outline"  fxFlex *ngIf="!documentIdentifier">
       <mat-label>Description</mat-label>
       <input formControlName="description" matInput />
     </mat-form-field>

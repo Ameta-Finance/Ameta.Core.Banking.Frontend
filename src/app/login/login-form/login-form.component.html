@@ -1,9 +1,13 @@
+<div>
+  <div class="m-b-25 text-center"  fxFlexAlign="center" fxShow.gt-sm="false" fxShow="true">
+    <img src="assets/images/core.png" width="175" alt="Ameta Logo" class="img-container m-auto" />
+  </div>
+  <h1>Sign In</h1>
+  <p>Welcome back! Please enter your details.</p>
 <form fxLayout="column" [formGroup]="loginForm" (ngSubmit)="login()" id="login-form">
 
-  <mat-form-field fxFlexAlign="center" class="login-input">
-    <span matPrefix class="m-r-10">
-      <fa-icon icon="user-circle" size="lg"></fa-icon>
-    </span>
+  <mat-form-field appearance="outline"  fxFlexAlign="center" class="login-input">
+
     <mat-label>{{ 'labels.inputs.Username' | translate }}</mat-label>
     <input matInput type="text" autocomplete="off" formControlName="username">
     <mat-error *ngIf="loginForm.controls.username.hasError('required')">
@@ -11,16 +15,14 @@
     </mat-error>
   </mat-form-field>
 
-  <mat-form-field fxFlexAlign="center" class="login-input">
-    <span matPrefix class="m-r-10">
-      <fa-icon icon="lock" size="lg"></fa-icon>
-    </span>
+  <mat-form-field appearance="outline"  fxFlexAlign="center" class="login-input">
+  
     <mat-label>{{ 'labels.inputs.Password' | translate }}</mat-label>
     <input matInput type="{{ passwordInputType }}" formControlName="password">
     <button mat-button *ngIf="loginForm.controls.password.value && !loading" matSuffix mat-icon-button
       (mousedown)="passwordInputType = 'text'" (mouseup)="passwordInputType = 'password'">
-      <fa-icon *ngIf="passwordInputType === 'password'" icon="eye"></fa-icon>
-      <fa-icon *ngIf="passwordInputType === 'text'" icon="eye-slash"></fa-icon>
+      <span *ngIf="passwordInputType === 'password'" class="pass">Show</span>
+        <span *ngIf="passwordInputType === 'text'" class="pass">Hide</span>
     </button>
     <mat-error *ngIf="loginForm.controls.password.hasError('required')">
       {{ 'labels.inputs.Password' | translate }} <strong>{{ 'labels.commons.is required' | translate }}</strong>
@@ -39,3 +41,4 @@
   </button>
 
 </form>
+</div>

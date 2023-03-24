@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Classification</mat-label>
             <input matInput required formControlName="classification">
             <mat-error *ngIf="delinquencyRangeForm.controls.classification.hasError('required')">
@@ -16,7 +16,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Days From</mat-label>
             <input matInput type="number" required formControlName="minimumAgeDays">
             <mat-error *ngIf="delinquencyRangeForm.controls.minimumAgeDays.hasError('required')">
@@ -24,7 +24,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Days Till</mat-label>
             <input matInput type="number" formControlName="maximumAgeDays">
           </mat-form-field>

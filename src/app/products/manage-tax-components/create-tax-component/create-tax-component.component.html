@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Name</mat-label>
             <input matInput required formControlName="name">
             <mat-error *ngIf="taxComponentForm.controls.name.hasError('required')">
@@ -16,7 +16,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Percentage</mat-label>
             <input type="number" matInput required formControlName="percentage">
             <mat-error *ngIf="taxComponentForm.controls.percentage.hasError('required')">
@@ -28,7 +28,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Debit Account Type</mat-label>
             <mat-select formControlName="debitAccountType">
               <mat-option *ngFor="let debitAccountType of debitAccountTypeData" [value]="debitAccountType.id">
@@ -37,7 +37,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field *ngIf="taxComponentForm.controls.debitAccountType.value">
+          <mat-form-field appearance="outline"  *ngIf="taxComponentForm.controls.debitAccountType.value">
             <mat-label>Debit Account</mat-label>
             <mat-select required formControlName="debitAcountId">
               <mat-option *ngFor="let debitAccount of debitAccountData" [value]="debitAccount.id">
@@ -49,7 +49,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Credit Account Type</mat-label>
             <mat-select formControlName="creditAccountType">
               <mat-option *ngFor="let creditAccountType of creditAccountTypeData" [value]="creditAccountType.id">
@@ -58,7 +58,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field *ngIf="taxComponentForm.controls.creditAccountType.value">
+          <mat-form-field appearance="outline"  *ngIf="taxComponentForm.controls.creditAccountType.value">
             <mat-label>Credit Account</mat-label>
             <mat-select required formControlName="creditAcountId">
               <mat-option *ngFor="let creditAccount of creditAccountData" [value]="creditAccount.id">
@@ -70,7 +70,7 @@
             </mat-error>
           </mat-form-field>
 
-        <mat-form-field (click)="startDatePicker.open()">
+       <mat-form-field appearance="outline" (click)="startDatePicker.open()">
           <mat-label>Start date</mat-label>
           <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="startDatePicker" required formControlName="startDate">
           <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>

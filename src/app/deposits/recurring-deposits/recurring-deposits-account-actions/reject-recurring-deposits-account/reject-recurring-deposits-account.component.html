@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field (click)="rejectedOnDatePicker.open()">
+         <mat-form-field appearance="outline" (click)="rejectedOnDatePicker.open()">
             <mat-label>Rejected On Date</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="rejectedOnDatePicker" required
               formControlName="rejectedOnDate">
@@ -19,7 +19,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Note</mat-label>
             <textarea matInput formControlName="note" cdkTextareaAutosize cdkAutosizeMinRows="2"></textarea>
           </mat-form-field>

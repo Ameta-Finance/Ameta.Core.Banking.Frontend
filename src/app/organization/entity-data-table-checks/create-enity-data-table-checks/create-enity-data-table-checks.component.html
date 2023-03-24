@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Entity</mat-label>
             <mat-select required formControlName="entity">
               <mat-option *ngFor="let entity of entityTypes" [value]="entity.value">
@@ -20,7 +20,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Status</mat-label>
             <mat-select required formControlName="status">
               <mat-option *ngFor="let status of statusList" [value]="status.code">
@@ -32,7 +32,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Data Table</mat-label>
             <mat-select required formControlName="datatableName">
               <mat-option *ngFor="let dataTable of dataTableList" [value]="dataTable.dataTableName">
@@ -44,7 +44,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field *ngIf="entityType === 'm_loan'">
+          <mat-form-field appearance="outline"  *ngIf="entityType === 'm_loan'">
             <mat-label>Products</mat-label>
             <mat-select required formControlName="productId">
               <mat-option *ngFor="let loanProducts of createEntityData.loanProductDatas" [value]="loanProducts.id">
@@ -56,7 +56,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field *ngIf="entityType === 'm_savings_account'">
+          <mat-form-field appearance="outline"  *ngIf="entityType === 'm_savings_account'">
             <mat-label>Products</mat-label>
             <mat-select required formControlName="productId">
               <mat-option *ngFor="let savingsProducts of createEntityData.savingsProductDatas" [value]="savingsProducts.id">

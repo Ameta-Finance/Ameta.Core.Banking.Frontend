@@ -15,7 +15,7 @@
 
       <div fxLayout="column">
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Default Language</mat-label>
           <mat-select [formControl]="language" [compareWith]="compareOptions">
             <mat-option *ngFor="let language of languages" [value]="language">
@@ -24,7 +24,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Default Date Format</mat-label>
           <mat-select [formControl]="dateFormat">
             <mat-option *ngFor="let dateFormat of dateFormats" [value]="dateFormat">
@@ -33,7 +33,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Decimals to Display</mat-label>
           <mat-select [formControl]="decimalsToDisplay">
             <mat-option *ngFor="let decimalOpt of decimals" [value]="decimalOpt">
@@ -85,7 +85,7 @@
         <span class="header">Theme</span>
         <mifosx-theme-picker></mifosx-theme-picker>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Default Font</mat-label>
           <mat-select>
             <mat-option *ngFor="let font of fonts" [value]="font">
@@ -108,17 +108,17 @@
 
       <div fxLayout="column">
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Website</mat-label>
           <input type="url" matInput>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Email</mat-label>
           <input type="email" matInput>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Contact No</mat-label>
           <input type="tel" matInput>
         </mat-form-field>

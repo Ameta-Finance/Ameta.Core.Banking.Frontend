@@ -12,22 +12,22 @@
 
       <div fxLayout="column">
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Name of the Organization</mat-label>
           <input matInput>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Description</mat-label>
           <textarea matInput></textarea>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Summary</mat-label>
           <textarea matInput></textarea>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Default Language</mat-label>
           <mat-select>
             <mat-option *ngFor="let language of languages" [value]="language">
@@ -36,7 +36,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Default Date Format</mat-label>
           <mat-select>
             <mat-option *ngFor="let dateFormat of dateFormats" [value]="dateFormat">
@@ -86,7 +86,7 @@
       <div fxLayout="column">
 
         <span class="header">Mobile Banking App</span>
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Default Theme</mat-label>
           <mat-select>
             <mat-option *ngFor="let theme of mobileAppThemes" [value]="theme">
@@ -95,7 +95,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Default Font</mat-label>
           <mat-select>
             <mat-option *ngFor="let font of mobileAppFonts" [value]="font">
@@ -105,7 +105,7 @@
         </mat-form-field>
 
         <span class="header">Online Banking App</span>
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Default Theme</mat-label>
           <mat-select>
             <mat-option *ngFor="let theme of onlineBankingAppThemes" [value]="theme">
@@ -114,7 +114,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Default Font</mat-label>
           <mat-select>
             <mat-option *ngFor="let font of onlineBankingAppFonts" [value]="font">
@@ -137,17 +137,17 @@
 
       <div fxLayout="column">
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Website</mat-label>
           <input type="url" matInput>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Email</mat-label>
           <input type="email" matInput>
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Contact No</mat-label>
           <input type="tel" matInput>
         </mat-form-field>

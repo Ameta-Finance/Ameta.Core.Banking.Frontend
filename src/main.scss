@@ -9,3 +9,17 @@
 // Global Imports
 /* You can add global styles to this file, and also import other style files */
 @import "assets/styles/helper";
+
+
+.mat-expansion-panel-header, body,p, span , h1, h2, h3, h4, h5, h6, a, .mat-table, .mat-button, .mat-raised-button, .mat-icon-button, .mat-stroked-button, .mat-flat-button, .mat-fab, .mat-mini-fab, input, label, .mat-checkbox {
+    font-family: "Euclid Circular A" !important;
+}
+  .mat-expansion-panel-header-title, .mat-line ,.mat-menu-item{
+    color: #414a58 !important;
+}
+.mat-form-field-infix{
+    padding: 0.5em 0 !important;
+  }
+  .mat-form-field-wrapper{
+    color: #414a58;
+  }

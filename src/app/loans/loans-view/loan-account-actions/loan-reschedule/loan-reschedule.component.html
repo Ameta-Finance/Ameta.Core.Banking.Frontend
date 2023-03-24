@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field (click)="rescheduleDatePicker.open()">
+         <mat-form-field appearance="outline" (click)="rescheduleDatePicker.open()">
             <mat-label>Reschedule from Installment On</mat-label>
             <input matInput [min]="minDate" [matDatepicker]="rescheduleDatePicker" required
               formControlName="rescheduleFromDate">
@@ -19,7 +19,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Reason for Rescheduling</mat-label>
             <mat-select formControlName="rescheduleReasonId">
               <mat-option *ngFor="let rescheduleReasonCode of codes" [value]="rescheduleReasonCode.id">
@@ -31,7 +31,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field (click)="submittedDatePicker.open()">
+         <mat-form-field appearance="outline" (click)="submittedDatePicker.open()">
             <mat-label>Submitted On</mat-label>
             <input matInput [min]="minDate" [matDatepicker]="submittedDatePicker" required
               formControlName="submittedOnDate">
@@ -42,7 +42,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Comments</mat-label>
             <textarea matInput formControlName="rescheduleReasonComment"></textarea>
           </mat-form-field>
@@ -50,7 +50,7 @@
           <mat-checkbox [formControl]="changeRepaymentDate"> Change Repayment Date </mat-checkbox>
 
           <ng-container *ngIf="changeRepaymentDate.value" (click)="installmentrescheduledDatePicker.open()">
-            <mat-form-field>
+            <mat-form-field appearance="outline">
               <mat-label>Installment Rescheduled to</mat-label>
               <input matInput [min]="minDate" [matDatepicker]="installmentrescheduledDatePicker"
                 formControlName="adjustedDueDate">
@@ -62,12 +62,12 @@
           <mat-checkbox [formControl]="introduceGracePeriods"> Introduce Mid-term grace periods </mat-checkbox>
 
           <ng-container *ngIf="introduceGracePeriods.value">
-            <mat-form-field>
+            <mat-form-field appearance="outline">
               <mat-label>Principal Grace Periods </mat-label>
               <input matInput formControlName="graceOnPrincipal">
             </mat-form-field>
 
-            <mat-form-field>
+            <mat-form-field appearance="outline">
               <mat-label>Interest Grace Periods </mat-label>
               <input matInput formControlName="graceOnInterest">
             </mat-form-field>
@@ -76,7 +76,7 @@
           <mat-checkbox [formControl]="extendRepaymentPeriod"> Extend Repayment Period </mat-checkbox>
 
           <ng-container *ngIf="extendRepaymentPeriod.value">
-            <mat-form-field>
+            <mat-form-field appearance="outline">
               <mat-label>Number Of new Repayments</mat-label>
               <input matInput formControlName="extraTerms">
             </mat-form-field>
@@ -84,7 +84,7 @@
 
           <mat-checkbox [formControl]="adjustinterestrates"> Adjust interest rates for remainder of loan </mat-checkbox>
           <ng-container *ngIf="adjustinterestrates.value">
-            <mat-form-field>
+            <mat-form-field appearance="outline">
               <mat-label>New Interest Rate</mat-label>
               <input matInput formControlName="newInterestRate">
             </mat-form-field>

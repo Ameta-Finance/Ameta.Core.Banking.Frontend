@@ -21,9 +21,9 @@ import { Subscription } from 'rxjs';
 })
 export class FooterComponent implements OnInit, OnDestroy {
 
-  /** Mifos X version. */
+  /** Ameta Core version. */
   version: string = environment.version;
-  /** Mifos X hash */
+  /** Ameta Core hash */
   hash: string = environment.hash;
   server = '';
   /** Business Date */

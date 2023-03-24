@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Username</mat-label>
             <input matInput required formControlName="username">
             <mat-error *ngIf="emailConfigurationForm.controls.username.hasError('required')">
@@ -16,7 +16,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Password</mat-label>
             <input matInput required type="{{ passwordInputType }}" formControlName="password">
             <button mat-button *ngIf="emailConfigurationForm.controls.password.value" matSuffix mat-icon-button
@@ -29,7 +29,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Host</mat-label>
             <input matInput required formControlName="host">
             <mat-error *ngIf="emailConfigurationForm.controls.host.hasError('required')">
@@ -37,7 +37,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Port</mat-label>
             <input matInput type="number" required formControlName="port">
             <mat-error *ngIf="emailConfigurationForm.controls.port.hasError('required')">
@@ -49,7 +49,7 @@
             Use TLS?
           </mat-checkbox>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>From Email</mat-label>
             <input matInput type="email" required formControlName="fromEmail">
             <mat-error *ngIf="emailConfigurationForm.controls.fromEmail.hasError('required')">
@@ -57,7 +57,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>From Name</mat-label>
             <input matInput required formControlName="fromName">
             <mat-error *ngIf="emailConfigurationForm.controls.fromName.hasError('required')">

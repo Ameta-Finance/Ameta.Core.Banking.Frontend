@@ -6,7 +6,7 @@
 
     <div fxLayout="column">
 
-      <mat-form-field>
+      <mat-form-field appearance="outline">
         <mat-label>Select allowed parameter</mat-label>
         <mat-select required formControlName="parameterName">
           <mat-option *ngFor="let allowedParameter of data.allowedParameters" [value]="allowedParameter.id">
@@ -18,7 +18,7 @@
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field appearance="outline">
         <mat-label>Parameter name passed to Pentaho</mat-label>
         <input matInput formControlName="reportParameterName">
       </mat-form-field>

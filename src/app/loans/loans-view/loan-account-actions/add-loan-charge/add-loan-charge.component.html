@@ -7,7 +7,7 @@
       <mat-card-content>
 
         <div fxLayout="column">
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Charge</mat-label>
             <mat-select required formControlName="chargeId">
               <mat-option *ngFor="let loanCharge of loanChargeOptions" [value]="loanCharge.id">
@@ -19,7 +19,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Amount</mat-label>
             <input type="number" required matInput formControlName="amount" />
             <mat-error *ngIf="loanChargeForm.controls.amount.hasError('required')">
@@ -27,17 +27,17 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Charge Calculation</mat-label>
             <input matInput formControlName="chargeCalculation" />
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Charge Time</mat-label>
             <input matInput formControlName="chargeTime" />
           </mat-form-field>
 
-          <mat-form-field *ngIf="loanChargeForm.controls['dueDate']" (click)="dueDatePicker.open()">
+          <mat-form-field appearance="outline"  *ngIf="loanChargeForm.controls['dueDate']" (click)="dueDatePicker.open()">
             <mat-label>Due On</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="dueDatePicker" required
               formControlName="dueDate">

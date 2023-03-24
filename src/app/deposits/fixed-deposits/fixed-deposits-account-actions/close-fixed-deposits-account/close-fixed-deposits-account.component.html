@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field (click)="closedOnDatePicker.open()">
+         <mat-form-field appearance="outline" (click)="closedOnDatePicker.open()">
             <mat-label>Closed On Date</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="closedOnDatePicker" required formControlName="closedOnDate">
             <mat-datepicker-toggle matSuffix [for]="closedOnDatePicker"></mat-datepicker-toggle>
@@ -18,12 +18,12 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Maturity Amount</mat-label>
             <input type="number" matInput formControlName="maturityAmount"/>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Action</mat-label>
             <mat-select required formControlName="onAccountClosureId">
               <mat-option *ngFor="let closureOption of onAccountClosureOptions" [value]="closureOption.id">
@@ -35,7 +35,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field *ngIf="closeOnMaturityAccountForm.contains('toSavingsAccountId')">
+          <mat-form-field appearance="outline"  *ngIf="closeOnMaturityAccountForm.contains('toSavingsAccountId')">
             <mat-label>Transfer to Savings</mat-label>
             <mat-select required formControlName="toSavingsAccountId">
               <mat-option *ngFor="let account of savingsAccountsData" [value]="account.id">
@@ -47,12 +47,12 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field *ngIf="closeOnMaturityAccountForm.contains('transferDescription')">
+          <mat-form-field appearance="outline"  *ngIf="closeOnMaturityAccountForm.contains('transferDescription')">
             <mat-label>Transfer Description</mat-label>
             <input matInput formControlName="transferDescription"/>
           </mat-form-field>
 
-          <mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Note</mat-label>
             <textarea matInput formControlName="note" cdkTextareaAutosize cdkAutosizeMinRows="2"></textarea>
           </mat-form-field>

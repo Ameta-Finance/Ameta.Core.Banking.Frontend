@@ -2,17 +2,17 @@
 
   <div fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column" fxLayoutAlign.gt-sm="start center">
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Currency</mat-label>
       <input matInput formControlName="currencyCode">
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Decimal Places</mat-label>
       <input type="number" matInput formControlName="decimal">
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Total Number of Shares</mat-label>
       <input type="number" matInput formControlName="requestedShares" required>
       <mat-error>
@@ -20,17 +20,17 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Today's Price</mat-label>
       <input type="number" matInput formControlName="unitPrice">
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Currency in multiples of</mat-label>
       <input type="number" matInput formControlName="currencyMultiple" >
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Default Savings Account</mat-label>
       <mat-select formControlName="savingsAccountId" required>
         <mat-option *ngFor="let account of savingsAccountsData" [value]="account.id">
@@ -42,7 +42,7 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%" (click)="applicationDatePicker.open()">
+    <mat-form-field appearance="outline"  fxFlex="48%" (click)="applicationDatePicker.open()">
       <mat-label>Application Date</mat-label>
       <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="applicationDatePicker"
         formControlName="applicationDate" required>
@@ -59,12 +59,12 @@
 
     <h4 fxFlex="98%" class="mat-h4">Minimum Active Period</h4>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Frequency</mat-label>
       <input type="number" matInput formControlName="minimumActivePeriod">
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Type</mat-label>
       <mat-select formControlName="minimumActivePeriodFrequencyType">
         <mat-option *ngFor="let minimumActivePeriodFrequencyType of minimumActivePeriodFrequencyTypeData" [value]="minimumActivePeriodFrequencyType.id">
@@ -75,12 +75,12 @@
 
     <h4 fxFlex="98%" class="mat-h4">Lock-in Period</h4>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Frequency</mat-label>
       <input type="number" matInput formControlName="lockinPeriodFrequency">
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Type</mat-label>
       <mat-select formControlName="lockinPeriodFrequencyType">
         <mat-option *ngFor="let lockinPeriodFrequencyType of lockinPeriodFrequencyTypeData" [value]="lockinPeriodFrequencyType.id">

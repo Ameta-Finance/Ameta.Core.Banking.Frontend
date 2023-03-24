@@ -1,10 +1,10 @@
 <mat-card class="container">
   <div fxLayout="row" fxLayoutAlign="start center">
     <div class="search-box">
-      <mat-form-field>
+      <mat-form-field appearance="outline">
         <input matInput placeholder="Search by Name" [formControl]="name">
       </mat-form-field>
-      <mat-form-field>
+      <mat-form-field appearance="outline">
         <input matInput placeholder="Search by ExternalID" [formControl]="externalId">
       </mat-form-field>
       <mat-checkbox #showClosedCenters labelPosition="after" (change)="changeShowClosedCenters()">Show Closed Centers

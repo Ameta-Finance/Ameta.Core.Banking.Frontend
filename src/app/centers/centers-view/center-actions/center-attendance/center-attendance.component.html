@@ -2,7 +2,7 @@
 
   <mat-card fxLayout="column" fxLayoutGap="3%">
 
-    <mat-form-field fxFlex>
+    <mat-form-field appearance="outline"  fxFlex>
       <mat-label>Meeting Date</mat-label>
       <mat-select [formControl]="meetingDate">
         <mat-option *ngFor="let date of meetingDates" [value]="date">

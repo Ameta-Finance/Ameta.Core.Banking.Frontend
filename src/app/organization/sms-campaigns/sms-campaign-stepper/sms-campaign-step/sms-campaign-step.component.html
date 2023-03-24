@@ -2,7 +2,7 @@
 
   <div fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column" fxLayoutAlign.gt-sm="start center">
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Campaign Name</mat-label>
       <input matInput formControlName="campaignName" required>
       <mat-error>
@@ -10,7 +10,7 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%"
+    <mat-form-field appearance="outline"  fxFlex="48%"
       *ngIf="!smsCampaignDetailsForm.controls.isNotification.value">
       <mat-label>SMS Provider</mat-label>
       <mat-select formControlName="providerId">
@@ -20,7 +20,7 @@
       </mat-select>
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Trigger Type</mat-label>
       <mat-select formControlName="triggerType" required>
         <mat-option *ngFor="let triggerType of triggerTypes" [value]="triggerType.id">
@@ -36,7 +36,7 @@
       is Notification?
     </mat-checkbox>
 
-    <mat-form-field fxFlex="48%"
+    <mat-form-field appearance="outline"  fxFlex="48%"
       *ngIf="smsCampaignDetailsForm.contains('recurrenceStartDate')" (click)="recurrenceStartDatePicker.open()">
       <mat-label>Schedule Date</mat-label>
       <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="recurrenceStartDatePicker"
@@ -48,7 +48,7 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%"
+    <mat-form-field appearance="outline"  fxFlex="48%"
       *ngIf="smsCampaignDetailsForm.contains('frequency')">
       <mat-label>Repeats</mat-label>
       <mat-select formControlName="frequency" required>
@@ -62,7 +62,7 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%"
+    <mat-form-field appearance="outline"  fxFlex="48%"
       *ngIf="smsCampaignDetailsForm.contains('interval')">
       <mat-label>Repetition Interval</mat-label>
       <mat-select formControlName="interval" required>
@@ -75,7 +75,7 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%"
+    <mat-form-field appearance="outline"  fxFlex="48%"
       *ngIf="smsCampaignDetailsForm.contains('repeatsOnDay')">
       <mat-label>Repeats on Day</mat-label>
       <mat-select formControlName="repeatsOnDay" required>
@@ -92,7 +92,7 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field fxFlex="48%">
+    <mat-form-field appearance="outline"  fxFlex="48%">
       <mat-label>Business Rule</mat-label>
       <mat-select formControlName="runReportId" required>
         <mat-option *ngFor="let rule of businessRules" [value]="rule.reportId">

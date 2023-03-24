@@ -8,7 +8,7 @@
 
         <div fxLayout="column">
 
-          <mat-form-field fxFlex="48%">
+          <mat-form-field appearance="outline"  fxFlex="48%">
             <mat-label>To Savings Officer</mat-label>
             <mat-select formControlName="toSavingsOfficerId">
               <mat-option *ngFor="let officer of fieldOfficerData" [value]="officer.id">
@@ -17,7 +17,7 @@
             </mat-select>
           </mat-form-field>
 
-          <mat-form-field (click)="assignmentDatePicker.open()">
+         <mat-form-field appearance="outline" (click)="assignmentDatePicker.open()">
             <mat-label>Assignment Date</mat-label>
             <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="assignmentDatePicker" required formControlName="assignmentDate">
             <mat-datepicker-toggle matSuffix [for]="assignmentDatePicker"></mat-datepicker-toggle>

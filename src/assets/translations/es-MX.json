@@ -1,5 +1,5 @@
 {
-  "APP_NAME": "Mifos X",
+  "APP_NAME": "Ameta Core Banking",
   "Logged in as": "Sesión activa como",
   "Remember me": "Recordarme",
   "not_found_subtitle": "Vaya... Parece que esta página no existe.",
@@ -68,6 +68,7 @@
       "Reports": "Reportes",
       "Admin": "Administrador",
       "Self Service": "Auto Servicio",
+      "Quick Links": "Enlaces rápidos",
       "Configuration Wizard": "Asistente de Configuración",
       "Clients": "Clientes",
       "Groups": "Grupos",

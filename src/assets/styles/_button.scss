@@ -1,0 +1,15 @@
+.mat-raised-button:not([class*="mat-elevation-z"]) {
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  border: 1px solid #d9e0e8;
+  border-radius: 6px;
+}
+.mat-raised-button {
+  border: 1px solid #d9e0e8;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+}
+.mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+  line-height: 36px;
+  padding: 0 16px;
+  border-radius: 6px;
+}

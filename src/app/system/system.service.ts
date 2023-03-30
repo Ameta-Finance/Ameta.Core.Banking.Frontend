@@ -4,6 +4,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 
 /** rxjs Imports */
 import { Observable } from 'rxjs';
+import { AuthenticationInterceptor } from 'app/core/authentication/authentication.interceptor';
 
 /**
  * System service.
@@ -17,7 +18,7 @@ export class SystemService {
   /**
    * @param {HttpClient} http Http Client to send requests.
    */
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private authenticationInterceptor: AuthenticationInterceptor) { }
 
   /**
    * @returns {Observable<any>} Data tables.
@@ -345,6 +346,12 @@ export class SystemService {
    */
   createDataTable(dataTable: any): Observable<any> {
     return this.http.post('/datatables', dataTable);
+  }
+
+  addPermission(permission: any): Observable<any> {
+    const authKey = "QW1ldGEuR2F0ZXdheQ=="
+    this.authenticationInterceptor.setAuthKey(authKey)
+    return this.http.disableApiPrefix().post('https://techapi.ameta.finance/gateway/securities/create-permission', permission);
   }
 
   /**

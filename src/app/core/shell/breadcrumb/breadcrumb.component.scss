@@ -2,24 +2,23 @@
 
 .breadcrumb-wrapper {
   margin: 0 auto;
-  max-width: 84rem;
+  max-width: 74rem;
   width: 90%;
   word-wrap: break-word;
 
   .breadcrumb {
     list-style: none;
     padding: 0;
-    margin: 1.5rem 0;
-    line-height: 40px;
+    margin: 1.5rem 0 2.5rem;
 
     .breadcrumb-title {
       font-size: 1.25rem;
-      font-weight: 400;
+      font-weight: 500;
     }
 
     .separator::before {
       content: "";
-      border: 1.5px solid $mid-grey;
+      border: 1.5px solid #000;
       margin: 0 0.6rem;
       font-size: 1.25rem;
       font-weight: 400;
@@ -27,12 +26,12 @@
 
     .breadcrumb-label {
       display: inline;
-      font-size: 1rem;
+      font-size: 12px;
 
       .breadcrumb-link {
         a {
           text-decoration: none;
-          color: $status-approved;
+          color: #999999;
 
           &:hover {
             text-decoration: underline;
@@ -40,8 +39,8 @@
         }
 
         &::after {
-          content: "/";
-          margin: 0 0.4rem;
+          content: ">";
+          margin: 0 0.2rem;
         }
       }
     }

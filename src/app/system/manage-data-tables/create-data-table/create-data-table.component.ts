@@ -231,12 +231,17 @@ export class CreateDataTableComponent implements OnInit, AfterViewInit {
     if (this.dataTableForm.value.entitySubType == null || this.dataTableForm.value.entitySubType === '') {
       delete payload.entitySubType;
     }
+    const permissionData = {
+      permission: this.dataTableForm.value.datatableName
+    }
     this.systemService.createDataTable(payload).subscribe((response: any) => {
       if (this.configurationWizardService.showDatatablesForm === true) {
           this.configurationWizardService.showDatatablesForm = false;
           this.openDialog();
       } else {
-        this.router.navigate(['../', response.resourceIdentifier], { relativeTo: this.route });
+        this.systemService.addPermission(permissionData).subscribe((res: any) => {
+          this.router.navigate(['../', response.resourceIdentifier], { relativeTo: this.route });
+        });
       }
     });
   }

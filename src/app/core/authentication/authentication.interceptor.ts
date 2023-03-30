@@ -20,7 +20,8 @@ const httpOptions = {
 const authorizationHeader = 'Authorization';
 /** Two factor access token header. */
 const twoFactorAccessTokenHeader = 'Fineract-Platform-TFA-Token';
-
+// Permission auth header
+const authHeader = "authKey"
 /**
  * Http Request interceptor to set the request headers.
  */
@@ -40,6 +41,15 @@ export class AuthenticationInterceptor implements HttpInterceptor {
     return next.handle(request);
   }
 
+   /**
+   * Sets the auth key for permission header.
+   * @param {string} Permission auth key.
+   */
+   setAuthKey(authKey: string) {
+    httpOptions.headers[authHeader] = authKey;
+  }
+
+  
   /**
    * Sets the basic/oauth authorization header depending on the configuration.
    * @param {string} authenticationKey Authentication key.
